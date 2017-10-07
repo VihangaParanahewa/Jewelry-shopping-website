@@ -48,8 +48,21 @@ class UserModel extends CI_Model{
 
         );
 
-        return $this->db->insert('ring',$data);
-        //return false;
+        switch ($this->input->post('category')){
+            case 'Ring':
+                return $this->db->insert('ring',$data);
+                break;
+            case 'Necklace':
+                return $this->db->insert('necklace',$data);
+                break;
+            case 'Earring':
+                return $this->db->insert('earring',$data);
+                break;
+            default:
+                return false;
+        }
+
+
     }
 
 

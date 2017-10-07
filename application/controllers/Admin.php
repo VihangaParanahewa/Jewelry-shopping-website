@@ -36,7 +36,7 @@ class Admin extends CI_Controller{
                     $this->session->set_flashdata('message', 'You have upload the post successfully!');
                     $this->addPost();
                 } else {
-                    $this->session->set_flashdata('message', 'Problem Occurred, Try Again...');
+                    $this->session->set_flashdata('message', 'Category field NOT selected, Try Again...');
                     $this->addPost();
 
                 }
