@@ -36,15 +36,15 @@ if (!($this->session->userdata('logged_in'))){
 
 
 
-        <ul class="nav navbar-right">
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $this->session->userdata('firstName') ?><span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="<?php echo base_url('index.php/Login/viewProfile');?>">Profile</a></li>
-                    <li><a href="<?php echo base_url('index.php/Login/logoutUser');?>">Log Out</a></li>
+            <ul class="nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $this->session->userdata('firstName') ?><span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="<?php echo base_url('index.php/Login/viewProfile');?>">Profile</a></li>
+                        <li><a href="<?php echo base_url('index.php/Login/logoutUser');?>">Log Out</a></li>
 
-                </ul>
-            </div>
+                    </ul>
+        </div>
     </div>
 </nav>
 
