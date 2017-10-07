@@ -7,7 +7,14 @@
 
             <h1>Create Post</h1>
 
-            <form action="" method="POST">
+            <?php
+            if ($this->session->flashdata('message')){
+                echo "<h3>".$this->session->flashdata('message')."</h3>";
+            }
+            ?>
+
+            <?php echo validation_errors(); ?>
+            <?php echo form_open('Admin/add');?>
 
                 <div class="form-group has-error">
                     <label for="slug">Title <span class="require"></span></label>
@@ -26,7 +33,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="description">Post Description</label>
+                    <label for="description">Description</label>
                     <textarea rows="5" class="form-control" name="description" ></textarea>
                 </div>
 
@@ -50,15 +57,15 @@
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-primary" name="submit" value="create">
                         Create
                     </button>
-                    <button class="btn btn-default">
+                    <button class="btn btn-default" name="submit" value="cancel">
                         Cancel
                     </button>
                 </div>
 
-            </form>
+            <?php echo form_close(); ?>
         </div>
 
     </div>

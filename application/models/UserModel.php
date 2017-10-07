@@ -35,4 +35,23 @@ class UserModel extends CI_Model{
 
     }
 
+    public function insertPostData(){
+
+        $data = array(
+
+            'title'=> $this->input->post('title',TRUE),
+            'category'=> $this->input->post('category',TRUE),
+            'description'=> $this->input->post('description',TRUE),
+            'colour'=>$this->input->post('colour',TRUE),
+            'price'=>$this->input->post('price',TRUE),
+            'image'=>$this->input->post('image',TRUE),
+
+        );
+
+        return $this->db->insert('ring',$data);
+        //return false;
+    }
+
+
+
 }
