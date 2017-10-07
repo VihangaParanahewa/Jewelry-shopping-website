@@ -31,8 +31,11 @@ if (!($this->session->userdata('logged_in'))){
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="<?php echo base_url('index.php/Admin/addPost')?>">ADD POST</a></li>
-                <li><a href="#"></a></li>
+                <li><a href="<?php echo base_url('index.php/Admin/viewPost')?>">View Post</a></li>
             </ul>
+
+
+
         <ul class="nav navbar-right">
             <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $this->session->userdata('firstName') ?><span class="caret"></span></a>
@@ -44,3 +47,9 @@ if (!($this->session->userdata('logged_in'))){
             </div>
     </div>
 </nav>
+
+<ul class="dropdown-menu" aria-labelledby="dropdownMenu4">
+    <li><a href="#">Regular link</a></li>
+    <li class="disabled"><a href="#">Disabled link</a></li>
+    <li><a href="#">Another link</a></li>
+</ul>

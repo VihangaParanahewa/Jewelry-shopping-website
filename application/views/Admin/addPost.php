@@ -15,8 +15,33 @@
                 </div>
 
                 <div class="form-group">
+                    <label for="category">Category</label>
+                    <select name="category" class="form-control">
+                        <option value="None">(Select The Category)</option>
+                        <option value="Ring">Ring</option>
+                        <option value="Necklace">Necklace</option>
+                        <option value="Earring">Earring</option>
+                    </select>
+
+                </div>
+
+                <div class="form-group">
                     <label for="description">Post Description</label>
                     <textarea rows="5" class="form-control" name="description" ></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="colour">Colour</label>
+                    <input type="color" class="form-control" name="colour">
+                </div>
+
+                <div class="form-group">
+                    <label for="price">Price</label>
+
+                    <div class="input-group">
+                        <span class="input-group-addon">LKR</span>
+                        <input type="number" class="form-control" name="price">
+                    </div>
                 </div>
 
                 <div class="form-group">
