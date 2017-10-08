@@ -31,7 +31,7 @@ if (!($this->session->userdata('logged_in'))){
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="<?php echo base_url('index.php/Admin/addPost')?>">ADD POST</a></li>
-                <li><a href="<?php echo base_url('index.php/Customer/viewPost')?>">View Post</a></li>
+                <li><a href="<?php echo base_url('index.php/Customer/viewPost')?>">VIEW POST</a></li>
             </ul>
 
 

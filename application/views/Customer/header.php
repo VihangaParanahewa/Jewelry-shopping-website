@@ -31,7 +31,7 @@ if (!($this->session->userdata('logged_in'))){
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li><a href="<?php echo base_url('index.php/Admin/addPost')?>">ADD POST</a></li>
-                <li><a href="<?php echo base_url('index.php/Customer/viewPost')?>">View Post</a></li>
+                <li><a href="<?php echo base_url('index.php/Customer/viewPost')?>">VIEW POST</a></li>
             </ul>
 
 
@@ -53,3 +53,19 @@ if (!($this->session->userdata('logged_in'))){
     <li class="disabled"><a href="#">Disabled link</a></li>
     <li><a href="#">Another link</a></li>
 </ul>
+
+
+<nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="<?php echo base_url('index.php/Customer/ring')?>">Ring</a>
+        <a class="navbar-brand" href="<?php echo base_url('index.php/Customer/necklace')?>">Necklace</a>
+        <a class="navbar-brand" href="<?php echo base_url('index.php/Customer/earring')?>">Earring</a>
+    </div>
+</nav>
