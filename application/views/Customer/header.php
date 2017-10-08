@@ -64,8 +64,8 @@ if (!($this->session->userdata('logged_in'))){
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="<?php echo base_url('index.php/Customer/ring')?>">Ring</a>
-        <a class="navbar-brand" href="<?php echo base_url('index.php/Customer/necklace')?>">Necklace</a>
-        <a class="navbar-brand" href="<?php echo base_url('index.php/Customer/earring')?>">Earring</a>
+        <a class="navbar-brand" href="<?php echo base_url('index.php/Customer/postRing')?>">Ring</a>
+        <a class="navbar-brand" href="<?php echo base_url('index.php/Customer/postNecklace')?>">Necklace</a>
+        <a class="navbar-brand" href="<?php echo base_url('index.php/Customer/postEarring')?>">Earring</a>
     </div>
 </nav>
