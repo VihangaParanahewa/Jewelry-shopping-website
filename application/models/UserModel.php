@@ -66,5 +66,24 @@ class UserModel extends CI_Model{
     }
 
 
+    public function ringPost(){
+        $respond=$this->db->get('ring');
+
+        if ($respond->num_rows()>0){
+            $i=0;
+            $image=array();
+            foreach ($respond->result() as $row)
+            {
+                $image[$i]=$row->image;
+                $i++;
+            }
+            return $image;
+        }else{
+            return false;
+        }
+
+
+    }
+
 
 }

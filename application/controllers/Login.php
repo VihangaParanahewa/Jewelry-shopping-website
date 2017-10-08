@@ -22,7 +22,7 @@ class Login extends CI_Controller{
                     'firstName'=>$result->firstName,
                     'lastName'=>$result->lastName,
                     'email'=>$result->email,
-                    'logged_in'=>TRUE
+                    'logged_in'=>TRUE,
 
                 );
 
