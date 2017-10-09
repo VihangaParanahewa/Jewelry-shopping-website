@@ -9,17 +9,15 @@ class Customer extends CI_Controller{
 
     public function postRing(){
         $this->load->model('UserModel');
-        $respond=$this->UserModel->ringPost();
-        if($respond!=false){
-
-            $this->session->set_userdata('ring',$respond);
-            //$this->session->set_userdata($result);
-
+        $data=$this->UserModel->ringPost();
+        if($data!=false){
+            $this->load->view('Customer/ring',array('data' => $data));
         }else{
             $this->session->set_flashdata('message','OPzz...Nothing To Publish');
+            $this->load->view('Customer/ring');
         }
 
-        $this->load->view('Customer/ring');
+
     }
 
 
