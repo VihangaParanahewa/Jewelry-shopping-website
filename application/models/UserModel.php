@@ -78,5 +78,17 @@ class UserModel extends CI_Model{
 
     }
 
+    public function necklacePost(){
+        $respond=$this->db->get('necklace');
+
+        if ($respond->num_rows()>0){
+            return $respond->result_array();
+        }else{
+            return false;
+        }
+
+
+    }
+
 
 }

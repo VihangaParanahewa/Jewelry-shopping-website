@@ -17,7 +17,6 @@ class Customer extends CI_Controller{
             $this->load->view('Customer/ring');
         }
 
-
     }
 
 
@@ -26,7 +25,15 @@ class Customer extends CI_Controller{
 
 
     public function postNecklace(){
-        $this->load->view('Customer/necklace');
+        $this->load->model('UserModel');
+        $data=$this->UserModel->necklacePost();
+        if($data!=false){
+            $this->load->view('Customer/necklace',array('data' => $data));
+        }else{
+            $this->session->set_flashdata('message','OPzz...Nothing To Publish');
+            $this->load->view('Customer/necklace');
+        }
+
     }
 
 
