@@ -41,7 +41,14 @@ class Customer extends CI_Controller{
 
 
     public function postEarring(){
-        $this->load->view('Customer/earring');
+        $this->load->model('UserModel');
+        $data=$this->UserModel->earringPost();
+        if($data!=false){
+            $this->load->view('Customer/earring',array('data' => $data));
+        }else{
+            $this->session->set_flashdata('message','OPzz...Nothing To Publish');
+            $this->load->view('Customer/earring');
+        }
     }
 
 }

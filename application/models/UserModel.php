@@ -79,7 +79,19 @@ class UserModel extends CI_Model{
     }
 
     public function necklacePost(){
-        $respond=$this->db->get('necklace');
+    $respond=$this->db->get('necklace');
+
+    if ($respond->num_rows()>0){
+        return $respond->result_array();
+    }else{
+        return false;
+    }
+
+
+}
+
+    public function earringPost(){
+        $respond=$this->db->get('earring');
 
         if ($respond->num_rows()>0){
             return $respond->result_array();
