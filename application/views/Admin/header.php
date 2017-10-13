@@ -30,7 +30,9 @@ if (!($this->session->userdata('logged_in'))){
 
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="<?php echo base_url('index.php/Admin/addPost')?>">ADD POST</a></li>
+                <?php if ($this->session->userdata('id')==1){?>
+                    <li><a href="<?php echo base_url('index.php/Admin/addPost')?>">ADD POST</a></li>
+                <?php } ?>
                 <li><a href="<?php echo base_url('index.php/Customer/viewPost')?>">VIEW POST</a></li>
             </ul>
 
