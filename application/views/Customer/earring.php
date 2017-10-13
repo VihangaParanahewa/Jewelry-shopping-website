@@ -36,6 +36,10 @@
         </tbody>
     </table>
 
+    <?php unset($_SESSION['isDataOnEarring'],
+        $_SESSION['message']
+    );?>
+
 
 
 

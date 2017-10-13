@@ -36,6 +36,10 @@
         </tbody>
     </table>
 
+    <?php unset($_SESSION['isDataOnNecklace'],
+        $_SESSION['message']
+    );?>
+
 
 
 
