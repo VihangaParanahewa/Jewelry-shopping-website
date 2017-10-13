@@ -19,6 +19,9 @@
             <td>Colour</td>
             <td>Price</td>
             <td>Image</td>
+            <?php if($this->session->userdata('id')==1){ ?>
+                <td>Action</td>
+            <?php }?>
         </tr>
 
         <?php if($this->session->userdata('isDataOnRing')){
@@ -30,6 +33,14 @@
                     <td bgcolor="<?php  echo $row['colour'];?>"></td>
                     <td><?php echo $row['price'];?></td>
                     <td><img  src="<?php echo base_url()."image/"; ?><?php  echo  $row['image'];?>" alt="ringImage" height="75" width="100"></td>
+
+                    <?php if($this->session->userdata('id')==1){ ?>
+                        <td>
+                            <a href="<?php echo base_url('index.php/Admin/postUpdate')?>">Edit</a>
+                            <a href="">Delete</a>
+                        </td>
+                    <?php }?>
+
                 </tr>
             <?php }
         } ?>

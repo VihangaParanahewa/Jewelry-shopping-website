@@ -45,5 +45,13 @@ class Admin extends CI_Controller{
         }
     }
 
+    public function postUpdate(){
+        $this->load->view('Admin/updateRingPost');
+    }
+
+    public function updateRingPost(){
+
+    }
+
 
 }
