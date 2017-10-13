@@ -25,9 +25,9 @@
                 <td><?php echo $row['title'];?></td>
                 <td><?php echo $row['category'];?></td>
                 <td><?php echo $row['description'];?></td>
-                <td><?php echo $row['colour'];?></td>
+                <td bgcolor="<?php echo $row['colour'];?>"></td>
                 <td><?php echo $row['price'];?></td>
-                <td><?php echo $row['image'];?></td>
+                <td><img  src="<?php echo base_url()."image/"; ?><?php  echo  $row['image'];?>" alt="ringImage" height="75" width="100"></td>
             </tr>
         <?php }?>
 
