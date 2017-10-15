@@ -103,4 +103,23 @@ class UserModel extends CI_Model{
     }
 
 
+    public function updateRingPostData(){
+
+        $data = array(
+
+            'title'=> $this->input->post('title'),
+            'category'=> $this->input->post('category'),
+            'description'=> $this->input->post('description'),
+            'price'=>$this->input->post('price'),
+            'colour'=>$this->input->post('colour'),
+            'image'=>$this->input->post('image'),
+
+        );
+
+
+       $this->db->where('title',$this->session->userdata('title'));
+        return $this->db->update('ring', $data);
+
+    }
+
 }

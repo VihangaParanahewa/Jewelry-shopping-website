@@ -36,8 +36,8 @@
 
                     <?php if($this->session->userdata('id')==1){ ?>
                         <td>
-                            <a href="<?php echo base_url('index.php/Admin/postUpdate')?>">Edit</a>
-                            <a href="">Delete</a>
+                            <a href="<?php echo base_url('index.php/Admin/editRingPost')?>" <?php $this->session->set_userdata($row); //create session ?>>Edit</a>
+                            <a href="<?php echo base_url('index.php/Admin/deleteRingPost')?>">Delete</a>
                         </td>
                     <?php }?>
 

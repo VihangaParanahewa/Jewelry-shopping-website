@@ -12,22 +12,22 @@
 
             <div class="form-group has-error">
                 <label for="slug">Title <span class="require"></span></label>
-                <input type="text" class="form-control" name="title" value=""/>
+                <input type="text" class="form-control" name="title" value="<?php echo $this->session->userdata('title')?>"/>
             </div>
 
             <div class="form-group">
                 <label for="category">Category</label>
-                <input type="text" class="form-control" name="category" value=""/>
+                <input type="text" class="form-control" name="category" value="<?php echo $this->session->userdata('category')?>"/>
             </div>
 
             <div class="form-group">
                 <label for="description">Description</label>
-                <textarea rows="5" class="form-control" name="description">Set Here</textarea>
+                <textarea rows="5" class="form-control" name="description"><?php echo $this->session->userdata('description')?></textarea>
             </div>
 
             <div class="form-group">
                 <label for="colour">Colour</label>
-                <input type="color" class="form-control" name="colour" value="">
+                <input type="color" class="form-control" name="colour" value="<?php echo $this->session->userdata('colour')?>">
             </div>
 
             <div class="form-group">
@@ -35,14 +35,14 @@
 
                 <div class="input-group">
                     <span class="input-group-addon">LKR</span>
-                    <input type="number" class="form-control" name="price" value="">
+                    <input type="number" class="form-control" name="price" value="<?php echo $this->session->userdata('price')?>">
                 </div>
             </div>
 
             <div class="form-group">
-                <label for="image">Post Image</label>
-                <input type="file" name="image" value=""/>
-                (Already old image there,Choose a new image Only if you want to replace for the old image)
+                <label for="image">Type Image Name</label>
+                <input type="text" name="image" value="<?php echo $this->session->userdata('image')?>" placeholder="xxx.jpg"/>
+                (Eg:xxx.jpg)
             </div>
 
             <div class="form-group">

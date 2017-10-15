@@ -45,11 +45,39 @@ class Admin extends CI_Controller{
         }
     }
 
-    public function postUpdate(){
+    public function editRingPost(){
         $this->load->view('Admin/updateRingPost');
     }
 
     public function updateRingPost(){
+
+        if ($this->input->post('submit') == 'cancel') {
+            $this->load->view('Customer/viewPost');
+        }else{
+            $this->load->model('UserModel');
+            $response = $this->UserModel->updateRingPostData();
+
+            if ($response) {
+                $this->session->set_flashdata('message', 'You have Update the post successfully!');
+                unset(
+                    $_SESSION['title'],
+                    $_SESSION['description'],
+                    $_SESSION['category'],
+                    $_SESSION['price'],
+                    $_SESSION['image'],
+                    $_SESSION['colour']
+
+                );
+                $this->load->view('Customer/viewPost');
+            } else {
+                $this->session->set_flashdata('message', 'Problem Occurred in Update Process...');
+                $this->load->view('Customer/viewPost');
+
+            }
+
+
+        }
+
 
     }
 
