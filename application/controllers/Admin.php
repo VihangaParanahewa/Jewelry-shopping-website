@@ -19,7 +19,20 @@ class Admin extends CI_Controller{
             $this->load->view('Admin/addPost');
 
         } else {
-            $this->form_validation->set_rules('title', 'Title', 'required|is_unique[ring.title]');
+            switch ($this->input->post('category')){
+                case 'Ring':
+                    $this->form_validation->set_rules('title', 'Title', 'required|is_unique[ring.title]');
+                    break;
+                case 'Necklace':
+                    $this->form_validation->set_rules('title', 'Title', 'required|is_unique[necklace.title]');
+                    break;
+                case 'Earring':
+                    $this->form_validation->set_rules('title', 'Title', 'required|is_unique[earring.title]');
+                    break;
+                default:
+                    $this->form_validation->set_rules('title', 'Title', 'required');
+
+            }
             $this->form_validation->set_rules('category', 'Category', 'required');
             $this->form_validation->set_rules('description', 'Description', 'required');
             $this->form_validation->set_rules('colour', 'Colour', 'required');
