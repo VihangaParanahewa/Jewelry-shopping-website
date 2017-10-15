@@ -19,7 +19,7 @@ class Admin extends CI_Controller{
             $this->load->view('Admin/addPost');
 
         } else {
-            $this->form_validation->set_rules('title', 'Title', 'required');
+            $this->form_validation->set_rules('title', 'Title', 'required|is_unique[ring.title]');
             $this->form_validation->set_rules('category', 'Category', 'required');
             $this->form_validation->set_rules('description', 'Description', 'required');
             $this->form_validation->set_rules('colour', 'Colour', 'required');
@@ -59,27 +59,50 @@ class Admin extends CI_Controller{
 
             if ($response) {
                 $this->session->set_flashdata('message', 'You have Update the post successfully!');
-                unset(
-                    $_SESSION['title'],
-                    $_SESSION['description'],
-                    $_SESSION['category'],
-                    $_SESSION['price'],
-                    $_SESSION['image'],
-                    $_SESSION['colour']
-
-                );
                 $this->load->view('Customer/viewPost');
             } else {
                 $this->session->set_flashdata('message', 'Problem Occurred in Update Process...');
                 $this->load->view('Customer/viewPost');
 
             }
+        }
 
+        unset(
+            $_SESSION['title'],
+            $_SESSION['description'],
+            $_SESSION['category'],
+            $_SESSION['price'],
+            $_SESSION['image'],
+            $_SESSION['colour']
+
+        );
+    }
+
+
+
+    public function deleteRingPost()
+    {
+        $this->load->model('UserModel');
+        $response = $this->UserModel->deleteRingPostData();
+
+        if ($response) {
+            $this->session->set_flashdata('message', 'You have Deleted the Post...');
+            $this->load->view('Customer/viewPost');
+        } else {
+            $this->session->set_flashdata('message', 'Problem Occurred in Deleting Process...');
+            $this->load->view('Customer/viewPost');
 
         }
 
+        unset(
+            $_SESSION['title'],
+            $_SESSION['description'],
+            $_SESSION['category'],
+            $_SESSION['price'],
+            $_SESSION['image'],
+            $_SESSION['colour']
 
+        );
     }
-
 
 }

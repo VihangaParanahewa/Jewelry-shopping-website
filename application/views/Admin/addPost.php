@@ -71,7 +71,9 @@
     </div>
 </div>
 
-
+<?php unset($_SESSION['isDataOnRing'],
+    $_SESSION['message']
+);?>
 
 
 

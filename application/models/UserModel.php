@@ -122,4 +122,10 @@ class UserModel extends CI_Model{
 
     }
 
+
+    public function deleteRingPostData(){
+        $this->db->where('title',$this->session->userdata('title'));
+        return $this->db->delete('ring');
+    }
+
 }
