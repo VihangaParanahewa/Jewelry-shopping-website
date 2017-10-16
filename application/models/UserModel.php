@@ -128,4 +128,56 @@ class UserModel extends CI_Model{
         return $this->db->delete('ring');
     }
 
+
+    public function updateNecklacePostData(){
+
+        $data = array(
+
+            'title'=> $this->input->post('title'),
+            'category'=> $this->input->post('category'),
+            'description'=> $this->input->post('description'),
+            'price'=>$this->input->post('price'),
+            'colour'=>$this->input->post('colour'),
+            'image'=>$this->input->post('image'),
+
+        );
+
+
+        $this->db->where('title',$this->session->userdata('title'));
+        return $this->db->update('necklace', $data);
+    }
+
+
+
+    public function updateEarringPostData(){
+
+        $data = array(
+
+            'title'=> $this->input->post('title'),
+            'category'=> $this->input->post('category'),
+            'description'=> $this->input->post('description'),
+            'price'=>$this->input->post('price'),
+            'colour'=>$this->input->post('colour'),
+            'image'=>$this->input->post('image'),
+
+        );
+
+
+        $this->db->where('title',$this->session->userdata('title'));
+        return $this->db->update('earring', $data);
+    }
+
+
+
+
+    public function deleteNecklacePostData(){
+        $this->db->where('title',$this->session->userdata('title'));
+        return $this->db->delete('necklace');
+    }
+
+    public function deleteEarringPostData(){
+        $this->db->where('title',$this->session->userdata('title'));
+        return $this->db->delete('earring');
+    }
+
 }

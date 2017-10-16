@@ -62,13 +62,34 @@ class Admin extends CI_Controller{
         $this->load->view('Admin/updateRingPost');
     }
 
-    public function updateRingPost(){
+    public function editNecklacePost(){
+        $this->load->view('Admin/updateNecklacePost');
+    }
+
+    public function editEarringPost(){
+        $this->load->view('Admin/updateEarringPost');
+    }
+
+    public function updatePost(){
 
         if ($this->input->post('submit') == 'cancel') {
             $this->load->view('Customer/viewPost');
         }else{
             $this->load->model('UserModel');
-            $response = $this->UserModel->updateRingPostData();
+            switch ($this->input->post('category')){
+                case 'Ring':
+                    $response = $this->UserModel->updateRingPostData();
+                    break;
+                case 'Necklace':
+                    $response = $this->UserModel->updateNecklacePostData();
+                    break;
+                case 'Earring':
+                    $response = $this->UserModel->updateEarringPostData();
+                    break;
+                default:
+                    $response=false;
+            }
+
 
             if ($response) {
                 $this->session->set_flashdata('message', 'You have Update the post successfully!');
@@ -93,10 +114,23 @@ class Admin extends CI_Controller{
 
 
 
-    public function deleteRingPost()
+    public function deletePost()
     {
         $this->load->model('UserModel');
-        $response = $this->UserModel->deleteRingPostData();
+        switch ($this->session->userdata('category')){
+            case 'Ring':
+                $response = $this->UserModel->deleteRingPostData();
+                break;
+            case 'Necklace':
+                $response = $this->UserModel->deleteNecklacePostData();
+                break;
+            case 'Earring':
+                $response = $this->UserModel->deleteEarringPostData();
+                break;
+            default:
+                $response=false;
+        }
+
 
         if ($response) {
             $this->session->set_flashdata('message', 'You have Deleted the Post...');

@@ -18,6 +18,9 @@
             <td>Colour</td>
             <td>Price</td>
             <td>Image</td>
+            <?php if($this->session->userdata('id')==1){ ?>
+                <td>Action</td>
+            <?php }?>
         </tr>
 
         <?php if ($this->session->userdata('isDataOnEarring')){
@@ -29,6 +32,14 @@
                     <td bgcolor="<?php echo $row['colour'];?>"></td>
                     <td><?php echo $row['price'];?></td>
                     <td><img  src="<?php echo base_url()."image/"; ?><?php  echo  $row['image'];?>" alt="earringImage" height="75" width="100"></td>
+
+                    <?php if($this->session->userdata('id')==1){ ?>
+                        <td>
+                            <a href="<?php echo base_url('index.php/Admin/editEarringPost')?>" <?php $this->session->set_userdata($row); //create session ?>>Edit</a>
+                            <a href="<?php echo base_url('index.php/Admin/deletePost')?>" <?php $this->session->set_userdata($row); //create session ?>>Delete</a>
+                        </td>
+                    <?php }?>
+
                 </tr>
             <?php }
         }?>
