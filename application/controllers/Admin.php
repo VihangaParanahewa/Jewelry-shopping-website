@@ -95,7 +95,7 @@ class Admin extends CI_Controller{
                 $this->session->set_flashdata('message', 'You have Update the post successfully!');
                 $this->load->view('Customer/viewPost');
             } else {
-                $this->session->set_flashdata('message', 'Problem Occurred in Update Process...');
+                $this->session->set_flashdata('message', 'Problem Occur in Update Process...');
                 $this->load->view('Customer/viewPost');
 
             }
