@@ -6,7 +6,7 @@
 
         <div class="col-md-8 col-md-offset-2">
 
-            <h1>Update Ring Post</h1>
+            <h1>Update Earring Post</h1>
 
             <?php echo form_open('Admin/updatePost');?>
 
