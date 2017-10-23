@@ -35,7 +35,7 @@
 
                     <?php if($this->session->userdata('id')==1){ ?>
                         <td>
-                            <a href="<?php echo base_url('index.php/Admin/editNecklacePost)/'.$row['necklaceId'])?>"  class="btn btn-info">Edit</a>
+                            <a href="<?php echo base_url('index.php/Admin/editNecklacePost/'.$row['necklaceId'])?>"  class="btn btn-info">Edit</a>
                             <a href="<?php echo base_url('index.php/Admin/deleteNecklace/'.$row['necklaceId'])?>"  class="btn btn-danger">Delete</a>
                         </td>
                     <?php }?>
