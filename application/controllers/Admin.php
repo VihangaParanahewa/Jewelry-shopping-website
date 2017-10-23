@@ -58,8 +58,15 @@ class Admin extends CI_Controller{
         }
     }
 
-    public function editRingPost(){
-        $this->load->view('Admin/updateRingPost');
+    public function editRingPost($id){
+        $this->load->model('UserModel');
+        $data = $this->UserModel->editRing($id);
+        if($data!=false){
+            $this->load->view('Admin/updateRingPost',array('data' => $data));
+        }else{
+            echo "Error...";
+        }
+
     }
 
     public function editNecklacePost(){
@@ -70,7 +77,7 @@ class Admin extends CI_Controller{
         $this->load->view('Admin/updateEarringPost');
     }
 
-    public function updatePost(){
+    public function updatePost($id){
 
         if ($this->input->post('submit') == 'cancel') {
             $this->load->view('Customer/viewPost');
@@ -78,7 +85,7 @@ class Admin extends CI_Controller{
             $this->load->model('UserModel');
             switch ($this->input->post('category')){
                 case 'Ring':
-                    $response = $this->UserModel->updateRingPostData();
+                    $response = $this->UserModel->updateRingPostData($id);
                     break;
                 case 'Necklace':
                     $response = $this->UserModel->updateNecklacePostData();
@@ -100,16 +107,6 @@ class Admin extends CI_Controller{
 
             }
         }
-
-        unset(
-            $_SESSION['title'],
-            $_SESSION['description'],
-            $_SESSION['category'],
-            $_SESSION['price'],
-            $_SESSION['image'],
-            $_SESSION['colour']
-
-        );
     }
 
 

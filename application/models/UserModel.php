@@ -102,8 +102,18 @@ class UserModel extends CI_Model{
 
     }
 
+    public function editRing($id){
+        $this->db->where('ringId',$id);
+        $respond=$this->db->get('ring');
+        if ($respond->num_rows()>0) {
+            return $respond->result_array();
+        }else{
+            return false;
+        }
+    }
 
-    public function updateRingPostData(){
+
+    public function updateRingPostData($id){
 
         $data = array(
 
@@ -117,7 +127,7 @@ class UserModel extends CI_Model{
         );
 
 
-       $this->db->where('title',$this->session->userdata('title'));
+       $this->db->where('ringId',$id);
         return $this->db->update('ring', $data);
 
     }
