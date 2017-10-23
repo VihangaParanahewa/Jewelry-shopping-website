@@ -52,7 +52,7 @@
                 <button type="submit" class="btn btn-primary" name="submit" value="update">
                     Update
                 </button>
-                <button class="btn btn-default" name="submit" value="cancel">
+                <button class="btn btn-danger" name="submit" value="cancel">
                     Cancel
                 </button>
             </div>
