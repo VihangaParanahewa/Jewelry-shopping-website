@@ -109,25 +109,9 @@ class Admin extends CI_Controller{
         }
     }
 
-
-
-    public function deletePost()
-    {
+    public function deleteRing($id){
         $this->load->model('UserModel');
-        switch ($this->session->userdata('category')){
-            case 'Ring':
-                $response = $this->UserModel->deleteRingPostData();
-                break;
-            case 'Necklace':
-                $response = $this->UserModel->deleteNecklacePostData();
-                break;
-            case 'Earring':
-                $response = $this->UserModel->deleteEarringPostData();
-                break;
-            default:
-                $response=false;
-        }
-
+        $response = $this->UserModel->deleteRingPostData($id);
 
         if ($response) {
             $this->session->set_flashdata('message', 'You have Deleted the Post...');
@@ -138,15 +122,35 @@ class Admin extends CI_Controller{
 
         }
 
-        unset(
-            $_SESSION['title'],
-            $_SESSION['description'],
-            $_SESSION['category'],
-            $_SESSION['price'],
-            $_SESSION['image'],
-            $_SESSION['colour']
-
-        );
     }
 
+    public function deleteNecklace($id){
+        $this->load->model('UserModel');
+        $response = $this->UserModel->deleteNecklacePostData($id);
+
+        if ($response) {
+            $this->session->set_flashdata('message', 'You have Deleted the Post...');
+            $this->load->view('Customer/viewPost');
+        } else {
+            $this->session->set_flashdata('message', 'Problem Occurred in Deleting Process...');
+            $this->load->view('Customer/viewPost');
+
+        }
+
+    }
+
+    public function deleteEarring($id){
+        $this->load->model('UserModel');
+        $response = $this->UserModel->deleteEarringPostData($id);
+
+        if ($response) {
+            $this->session->set_flashdata('message', 'You have Deleted the Post...');
+            $this->load->view('Customer/viewPost');
+        } else {
+            $this->session->set_flashdata('message', 'Problem Occurred in Deleting Process...');
+            $this->load->view('Customer/viewPost');
+
+        }
+
+    }
 }

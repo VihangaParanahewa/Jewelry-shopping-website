@@ -133,8 +133,8 @@ class UserModel extends CI_Model{
     }
 
 
-    public function deleteRingPostData(){
-        $this->db->where('title',$this->session->userdata('title'));
+    public function deleteRingPostData($id){
+        $this->db->where('ringId',$id);
         return $this->db->delete('ring');
     }
 
@@ -180,13 +180,13 @@ class UserModel extends CI_Model{
 
 
 
-    public function deleteNecklacePostData(){
-        $this->db->where('title',$this->session->userdata('title'));
+    public function deleteNecklacePostData($id){
+        $this->db->where('necklaceId',$id);
         return $this->db->delete('necklace');
     }
 
-    public function deleteEarringPostData(){
-        $this->db->where('title',$this->session->userdata('title'));
+    public function deleteEarringPostData($id){
+        $this->db->where('earringId',$id);
         return $this->db->delete('earring');
     }
 
