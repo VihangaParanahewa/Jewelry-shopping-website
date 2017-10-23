@@ -35,7 +35,7 @@
 
                     <?php if($this->session->userdata('id')==1){ ?>
                         <td>
-                            <a href="<?php echo base_url('index.php/Admin/editEarringPost')?>" <?php $this->session->set_userdata($row); //create session ?> class="btn btn-info">Edit</a>
+                            <a href="<?php echo base_url('index.php/Admin/editEarringPost/'.$row['earringId'])?>" class="btn btn-info">Edit</a>
                             <a href="<?php echo base_url('index.php/Admin/deleteEarring/'.$row['earringId'])?>"  class="btn btn-danger">Delete</a>
                         </td>
                     <?php }?>

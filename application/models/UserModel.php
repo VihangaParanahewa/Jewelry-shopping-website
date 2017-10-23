@@ -102,6 +102,12 @@ class UserModel extends CI_Model{
 
     }
 
+
+
+
+
+
+
     public function editRing($id){
         $this->db->where('ringId',$id);
         $respond=$this->db->get('ring');
@@ -139,7 +145,24 @@ class UserModel extends CI_Model{
     }
 
 
-    public function updateNecklacePostData(){
+
+
+
+
+
+
+    public function editNecklace($id){
+        $this->db->where('necklaceId',$id);
+        $respond=$this->db->get('necklace');
+        if ($respond->num_rows()>0) {
+            return $respond->result_array();
+        }else{
+            return false;
+        }
+    }
+
+
+    public function updateNecklacePostData($id){
 
         $data = array(
 
@@ -153,30 +176,9 @@ class UserModel extends CI_Model{
         );
 
 
-        $this->db->where('title',$this->session->userdata('title'));
+        $this->db->where('necklaceId',$id);
         return $this->db->update('necklace', $data);
     }
-
-
-
-    public function updateEarringPostData(){
-
-        $data = array(
-
-            'title'=> $this->input->post('title'),
-            'category'=> $this->input->post('category'),
-            'description'=> $this->input->post('description'),
-            'price'=>$this->input->post('price'),
-            'colour'=>$this->input->post('colour'),
-            'image'=>$this->input->post('image'),
-
-        );
-
-
-        $this->db->where('title',$this->session->userdata('title'));
-        return $this->db->update('earring', $data);
-    }
-
 
 
 
@@ -184,6 +186,42 @@ class UserModel extends CI_Model{
         $this->db->where('necklaceId',$id);
         return $this->db->delete('necklace');
     }
+
+
+
+
+
+
+
+    public function editEarring($id){
+        $this->db->where('earringId',$id);
+        $respond=$this->db->get('earring');
+        if ($respond->num_rows()>0) {
+            return $respond->result_array();
+        }else{
+            return false;
+        }
+    }
+
+
+    public function updateEarringPostData($id){
+
+        $data = array(
+
+            'title'=> $this->input->post('title'),
+            'category'=> $this->input->post('category'),
+            'description'=> $this->input->post('description'),
+            'price'=>$this->input->post('price'),
+            'colour'=>$this->input->post('colour'),
+            'image'=>$this->input->post('image'),
+
+        );
+
+
+        $this->db->where('earringId',$id);
+        return $this->db->update('earring', $data);
+    }
+
 
     public function deleteEarringPostData($id){
         $this->db->where('earringId',$id);

@@ -69,12 +69,24 @@ class Admin extends CI_Controller{
 
     }
 
-    public function editNecklacePost(){
-        $this->load->view('Admin/updateNecklacePost');
+    public function editNecklacePost($id){
+        $this->load->model('UserModel');
+        $data = $this->UserModel->editNecklace($id);
+        if($data!=false){
+            $this->load->view('Admin/updateNecklacePost',array('data' => $data));
+        }else{
+            echo "Error...";
+        }
     }
 
-    public function editEarringPost(){
-        $this->load->view('Admin/updateEarringPost');
+    public function editEarringPost($id){
+        $this->load->model('UserModel');
+        $data = $this->UserModel->editEarring($id);
+        if($data!=false){
+            $this->load->view('Admin/updateEarringPost',array('data' => $data));
+        }else{
+            echo "Error...";
+        }
     }
 
     public function updatePost($id){
@@ -88,10 +100,10 @@ class Admin extends CI_Controller{
                     $response = $this->UserModel->updateRingPostData($id);
                     break;
                 case 'Necklace':
-                    $response = $this->UserModel->updateNecklacePostData();
+                    $response = $this->UserModel->updateNecklacePostData($id);
                     break;
                 case 'Earring':
-                    $response = $this->UserModel->updateEarringPostData();
+                    $response = $this->UserModel->updateEarringPostData($id);
                     break;
                 default:
                     $response=false;
