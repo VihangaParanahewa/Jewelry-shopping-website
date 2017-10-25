@@ -25,9 +25,9 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="<?php echo base_url('index.php/Home/index')?>">Home</a></li>
-                <li><a href="<?php echo base_url('index.php/Home/about')?>">About Us</a></li>
-                <li><a href="<?php echo base_url('index.php/Home/contact')?>">Contact Us</a></li>
+                <li><a href="<?php echo base_url('index.php/Home/index')?>">HOME</a></li>
+                <li><a href="<?php echo base_url('index.php/Home/about')?>">ABOUT US</a></li>
+                <li><a href="<?php echo base_url('index.php/Home/contact')?>">CONTACT US</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="<?php echo base_url('index.php/Home/login')?>">LOG IN</a></li>

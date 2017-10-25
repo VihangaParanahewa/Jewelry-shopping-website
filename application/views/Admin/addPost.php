@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include dirname(__FILE__).'./../Customer/header.php'; ?>
 
 <div class="container">
     <div class="row">
@@ -87,4 +87,4 @@
 
 
 
-<?php include 'footer.php';?>
+<?php include dirname(__FILE__).'./../Customer/footer.php';?>

@@ -3,8 +3,22 @@
 
 class Customer extends CI_Controller{
 
+    public function index()
+    {
+        $this->load->view('Customer/home');
+    }
+
+
+    public function about(){
+        $this->load->view('Customer/about');
+    }
+
+    public function contact(){
+        $this->load->view('Customer/contact');
+    }
+
     public function viewPost(){
-        $this->load->view('Customer/viewPost');
+        $this->postRing();
     }
 
     public function postRing(){

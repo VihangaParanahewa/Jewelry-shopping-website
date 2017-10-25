@@ -1,4 +1,4 @@
-<?php  include 'header.php'; ?>
+<?php  include dirname(__FILE__).'./../Customer/header.php'; ?>
 
     <h1>My Profile</h1>
     <div class=" col-md-9 col-lg-9 ">
@@ -20,4 +20,4 @@
             </tbody>
         </table>
 
-<?php include 'footer.php'; ?>
+<?php include dirname(__FILE__).'./../Customer/footer.php'; ?>

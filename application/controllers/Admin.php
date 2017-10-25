@@ -5,7 +5,7 @@ if(!Defined('BASEPATH')) exit('No direct script access allowed');
 class Admin extends CI_Controller{
 
     public function index(){
-        $this->load->view('Admin/dashboard');
+        $this->load->view('Customer/home');
     }
 
     public function addPost(){
@@ -112,11 +112,11 @@ class Admin extends CI_Controller{
 
             if ($response) {
                 $this->session->set_flashdata('message', 'You have Update the post successfully!');
-                $this->load->view('Customer/viewPost');
+                $this->load->view('Customer/messageBox');
+
             } else {
                 $this->session->set_flashdata('message', 'Problem Occurred in Update Process...');
-                $this->load->view('Customer/viewPost');
-
+                $this->load->view('Customer/messageBox');
             }
         }
     }
@@ -127,10 +127,10 @@ class Admin extends CI_Controller{
 
         if ($response) {
             $this->session->set_flashdata('message', 'You have Deleted the Post...');
-            $this->load->view('Customer/viewPost');
+            $this->load->view('Customer/messageBox');
         } else {
             $this->session->set_flashdata('message', 'Problem Occurred in Deleting Process...');
-            $this->load->view('Customer/viewPost');
+            $this->load->view('Customer/messageBox');
 
         }
 
@@ -142,10 +142,10 @@ class Admin extends CI_Controller{
 
         if ($response) {
             $this->session->set_flashdata('message', 'You have Deleted the Post...');
-            $this->load->view('Customer/viewPost');
+            $this->load->view('Customer/messageBox');
         } else {
             $this->session->set_flashdata('message', 'Problem Occurred in Deleting Process...');
-            $this->load->view('Customer/viewPost');
+            $this->load->view('Customer/messageBox');
 
         }
 
@@ -157,10 +157,10 @@ class Admin extends CI_Controller{
 
         if ($response) {
             $this->session->set_flashdata('message', 'You have Deleted the Post...');
-            $this->load->view('Customer/viewPost');
+            $this->load->view('Customer/messageBox');
         } else {
             $this->session->set_flashdata('message', 'Problem Occurred in Deleting Process...');
-            $this->load->view('Customer/viewPost');
+            $this->load->view('Customer/messageBox');
 
         }
 
