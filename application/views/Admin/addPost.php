@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="form-group col-xs-6 has-error">
                     <label for="slug">Title <span class="require"></span></label>
-                    <input type="text" class="form-control" name="title" />
+                    <input type="text" class="form-control" name="title" placeholder="Set A Title" />
                 </div>
             </div>
 
@@ -39,7 +39,7 @@
             <div class="row">
                 <div class="form-group col-xs-8">
                     <label for="description">Description</label>
-                    <textarea rows="5" class="form-control" name="description" ></textarea>
+                    <textarea rows="5" class="form-control" name="description" placeholder="Type Description"></textarea>
                 </div>
             </div>
 
@@ -56,7 +56,7 @@
 
                     <div class="input-group">
                         <span class="input-group-addon">LKR</span>
-                        <input type="number" class="form-control" name="price">
+                        <input type="number" class="form-control" name="price" placeholder="00000">
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@
             <div class="row">
                 <div class="form-group col-xs-3">
                     <label for="image">Post Image</label>
-                    <input type="file" name="image" />
+                    <input type="file" name="image" placeholder="image"/>
                 </div>
             </div>
 
