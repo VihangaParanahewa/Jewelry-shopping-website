@@ -25,8 +25,7 @@
             <?php }?>
         </tr>
 
-        <?php if($this->session->userdata('isDataOnRing')){
-            foreach ($data as $row){ ?>
+        <?php foreach ($data as $row){ ?>
                 <tr>
                     <td><?php echo $row['title'];?></td>
                     <td><?php echo $row['category'];?></td>
@@ -44,12 +43,12 @@
 
                 </tr>
             <?php }
-        } ?>
+         ?>
 
         </tbody>
     </table>
 
-    <?php unset($_SESSION['isDataOnRing'],
+    <?php unset(
         $_SESSION['message']
     );?>
 
