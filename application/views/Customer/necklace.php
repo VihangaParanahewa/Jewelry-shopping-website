@@ -1,6 +1,6 @@
 <?php include 'header.php'; ?>
 
-<h1>Necklaces</h1>
+<h1>Necklaces</h1><br>
 
 <?php if ($this->session->flashdata('message')){
     echo "<h3>".$this->session->flashdata('message')."</h3>";

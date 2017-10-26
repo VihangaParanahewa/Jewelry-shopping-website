@@ -1,12 +1,13 @@
 <?php include 'header.php'; ?>
 
+
 <h1>Rings</h1>
+    <br>
 
 <?php if ($this->session->flashdata('message')){
     echo "<h3>".$this->session->flashdata('message')."</h3>";
 }
 ?>
-
 
 <div class=" col-md-9 col-lg-9 ">
     <table class="table table-user-information" align="center">
@@ -47,6 +48,7 @@
 
         </tbody>
     </table>
+
     <?php unset($_SESSION['isDataOnRing'],
         $_SESSION['message']
     );?>

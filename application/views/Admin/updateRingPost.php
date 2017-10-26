@@ -7,6 +7,7 @@
         <div class="col-md-8 col-md-offset-2">
 
             <h1>Update Ring Post</h1>
+            <hr>
             <?php foreach ($data as $row){ ?>
 
             <?php echo form_open('Admin/updatePost/'.$row['ringId']);?>

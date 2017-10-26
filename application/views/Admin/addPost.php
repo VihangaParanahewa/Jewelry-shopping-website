@@ -6,6 +6,7 @@
         <div class="col-md-8 col-md-offset-2">
 
             <h1>Create Post</h1>
+            <hr>
 
             <?php
             if ($this->session->flashdata('message')){
@@ -15,13 +16,15 @@
 
             <?php echo validation_errors(); ?>
             <?php echo form_open('Admin/add');?>
-
-                <div class="form-group has-error">
+            <div class="row">
+                <div class="form-group col-xs-6 has-error">
                     <label for="slug">Title <span class="require"></span></label>
                     <input type="text" class="form-control" name="title" />
                 </div>
+            </div>
 
-                <div class="form-group">
+            <div class="row">
+                <div class="form-group col-xs-4">
                     <label for="category">Category</label>
                     <select name="category" class="form-control">
                         <option value="None">(Select The Category)</option>
@@ -31,18 +34,24 @@
                     </select>
 
                 </div>
+            </div>
 
-                <div class="form-group">
+            <div class="row">
+                <div class="form-group col-xs-8">
                     <label for="description">Description</label>
                     <textarea rows="5" class="form-control" name="description" ></textarea>
                 </div>
+            </div>
 
-                <div class="form-group">
+            <div class="row">
+                <div class="form-group col-xs-3">
                     <label for="colour">Colour</label>
                     <input type="color" class="form-control" name="colour">
                 </div>
+            </div>
 
-                <div class="form-group">
+            <div class="row">
+                <div class="form-group col-xs-4">
                     <label for="price">Price</label>
 
                     <div class="input-group">
@@ -50,13 +59,17 @@
                         <input type="number" class="form-control" name="price">
                     </div>
                 </div>
+            </div>
 
-                <div class="form-group">
+            <div class="row">
+                <div class="form-group col-xs-3">
                     <label for="image">Post Image</label>
                     <input type="file" name="image" />
                 </div>
+            </div>
 
-                <div class="form-group">
+            <div class="row">
+                <div class="form-group col-xs-4">
                     <button type="submit" class="btn btn-primary" name="submit" value="create">
                         Create
                     </button>
@@ -64,6 +77,7 @@
                         Cancel
                     </button>
                 </div>
+            </div>
 
             <?php echo form_close(); ?>
         </div>
