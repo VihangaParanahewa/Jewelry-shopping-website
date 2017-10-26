@@ -19,12 +19,14 @@
             </div>
             </div>
 
-            <div class="row">
-                <div class="form-group col-xs-4">
-                <label for="category">Category</label>
-                <input type="text" class="form-control" name="category" value="<?php echo $row['category']?>"/>
-            </div>
-            </div>
+                <div class="row">
+                    <div class="form-group col-xs-4">
+                        <label for="category">Category</label>
+                        <select name="category" class="form-control">
+                            <option value="Necklace">Necklace</option>
+                        </select>
+                    </div>
+                </div>
 
             <div class="row">
                 <div class="form-group col-xs-8">
@@ -34,14 +36,14 @@
             </div>
 
             <div class="row">
-                <div class="form-group col-xs-4">
+                <div class="form-group col-xs-3">
                 <label for="colour">Colour</label>
                 <input type="color" class="form-control" name="colour" value="<?php echo $row['colour']?>">
             </div>
             </div>
 
             <div class="row">
-                <div class="form-group col-xs-3">
+                <div class="form-group col-xs-4">
                 <label for="price">Price</label>
 
                 <div class="input-group">
@@ -51,13 +53,13 @@
             </div>
             </div>
 
-            <div class="row">
-                <div class="form-group col-xs-6">
-                <label for="image">Type Image Name</label>
-                <input type="text" name="image" value="<?php echo $row['image']?>" placeholder="xxx.jpg"/>
-                (Eg:xxx.jpg)
-            </div>
-            </div>
+                <div class="row">
+                    <div class="form-group col-xs-4">
+                        <label for="image">Type Image Name</label>
+                        <input type="text" name="image" value="<?php echo $row['image']?>" placeholder="xxx.jpg"/>
+                        (Eg:xxx.jpg)
+                    </div>
+                </div>
 
             <div class="row">
             <div class="form-group col-xs-4">

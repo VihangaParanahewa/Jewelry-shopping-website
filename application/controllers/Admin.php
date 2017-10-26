@@ -105,8 +105,6 @@ class Admin extends CI_Controller{
                 case 'Earring':
                     $response = $this->UserModel->updateEarringPostData($id);
                     break;
-                default:
-                    $response=false;
             }
 
 

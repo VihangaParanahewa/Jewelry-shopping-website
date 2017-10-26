@@ -22,9 +22,11 @@
 
             <div class="row">
                 <div class="form-group col-xs-4">
-                <label for="category">Category</label>
-                <input type="text" class="form-control" name="category" value="<?php echo $row['category']?>"/>
-            </div>
+                    <label for="category">Category</label>
+                    <select name="category" class="form-control">
+                        <option value="Ring">Ring</option>
+                    </select>
+                </div>
             </div>
 
             <div class="row">
@@ -52,13 +54,13 @@
             </div>
             </div>
 
-            <div class="row">
-                <div class="form-group col-xs-6">
-                <label for="image">Type Image Name</label>
-                <input type="text" name="image" value="<?php echo $row['image']?>" placeholder="xxx.jpg"/>
-                (Eg:xxx.jpg)
-            </div>
-            </div>
+                <div class="row">
+                    <div class="form-group col-xs-4">
+                        <label for="image">Type Image Name</label>
+                        <input type="text" name="image" value="<?php echo $row['image']?>" placeholder="xxx.jpg"/>
+                        (Eg:xxx.jpg)
+                    </div>
+                </div>
 
             <div class="row">
                 <div class="form-group col-xs-4">
