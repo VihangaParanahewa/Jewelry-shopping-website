@@ -92,7 +92,18 @@ class Admin extends CI_Controller{
     public function updatePost($id){
 
         if ($this->input->post('submit') == 'cancel') {
-            $this->load->view('Customer/viewPost');
+            switch ($this->input->post('category')){
+                case 'Ring':
+                    redirect('Customer/viewPost');
+                    break;
+                case 'Necklace':
+                    redirect('Customer/postNecklace');
+                    break;
+                case 'Earring':
+                    redirect('Customer/postEarring');
+                    break;
+            }
+
         }else{
             $this->load->model('UserModel');
             switch ($this->input->post('category')){
@@ -110,11 +121,32 @@ class Admin extends CI_Controller{
 
             if ($response) {
                 $this->session->set_flashdata('message', 'You have Update the post successfully!');
-                $this->load->view('Customer/messageBox');
+                switch ($this->input->post('category')){
+                    case 'Ring':
+                        redirect('Customer/viewPost');
+                        break;
+                    case 'Necklace':
+                        redirect('Customer/postNecklace');
+                        break;
+                    case 'Earring':
+                        redirect('Customer/postEarring');
+                        break;
+                }
+
 
             } else {
                 $this->session->set_flashdata('message', 'Problem Occurred in Update Process...');
-                $this->load->view('Customer/messageBox');
+                switch ($this->input->post('category')){
+                    case 'Ring':
+                        redirect('Customer/viewPost');
+                        break;
+                    case 'Necklace':
+                        redirect('Customer/postNecklace');
+                        break;
+                    case 'Earring':
+                        redirect('Customer/postEarring');
+                        break;
+                }
             }
         }
     }
@@ -125,10 +157,10 @@ class Admin extends CI_Controller{
 
         if ($response) {
             $this->session->set_flashdata('message', 'You have Deleted the Post...');
-            $this->load->view('Customer/messageBox');
+            redirect('Customer/viewPost');
         } else {
             $this->session->set_flashdata('message', 'Problem Occurred in Deleting Process...');
-            $this->load->view('Customer/messageBox');
+            redirect('Customer/viewPost');
 
         }
 
@@ -140,10 +172,10 @@ class Admin extends CI_Controller{
 
         if ($response) {
             $this->session->set_flashdata('message', 'You have Deleted the Post...');
-            $this->load->view('Customer/messageBox');
+            redirect('Customer/postNecklace');
         } else {
             $this->session->set_flashdata('message', 'Problem Occurred in Deleting Process...');
-            $this->load->view('Customer/messageBox');
+            redirect('Customer/postNecklace');
 
         }
 
@@ -155,10 +187,10 @@ class Admin extends CI_Controller{
 
         if ($response) {
             $this->session->set_flashdata('message', 'You have Deleted the Post...');
-            $this->load->view('Customer/messageBox');
+            redirect('Customer/postEarring');
         } else {
             $this->session->set_flashdata('message', 'Problem Occurred in Deleting Process...');
-            $this->load->view('Customer/messageBox');
+            redirect('Customer/postEarring');
 
         }
 
