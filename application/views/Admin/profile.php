@@ -1,4 +1,4 @@
-<?php  include dirname(__FILE__).'./../Customer/header.php'; ?>
+<?php $page='profile'; include dirname(__FILE__).'./../Customer/header.php'; ?>
 
     <h1>My Profile</h1>
     <div class=" col-md-9 col-lg-9 ">

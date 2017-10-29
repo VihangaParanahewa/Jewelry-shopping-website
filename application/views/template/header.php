@@ -34,14 +34,15 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li><a href="<?php echo base_url('index.php/Home/index')?>">HOME</a></li>
-                <li><a href="<?php echo base_url('index.php/Home/about')?>">ABOUT US</a></li>
-                <li><a href="<?php echo base_url('index.php/Home/contact')?>">CONTACT US</a></li>
+                <li class="<?php if ($page=='home'){echo 'active';} ?>"><a href="<?php echo base_url('index.php/Home/index')?>">HOME</a></li>
+                <li class="<?php if ($page=='about'){echo 'active';} ?>"><a href="<?php echo base_url('index.php/Home/about')?>">ABOUT US</a></li>
+                <li class="<?php if ($page=='contact'){echo 'active';} ?>"><a href="<?php echo base_url('index.php/Home/contact')?>">CONTACT US</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="<?php echo base_url('index.php/Home/login')?>">LOG IN</a></li>
-                <li><a href="<?php echo base_url('index.php/Home/register')?>">REGISTER</a></li>
+                <li class="<?php if ($page=='login'){echo 'active';} ?>"><a href="<?php echo base_url('index.php/Home/login')?>">LOG IN</a></li>
+                <li class="<?php if ($page=='registration'){echo 'active';} ?>"><a href="<?php echo base_url('index.php/Home/register')?>">REGISTER</a></li>
                     </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+

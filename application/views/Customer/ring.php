@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php $page='ring'; include 'header.php'; ?>
 
 
 <h1>Rings</h1>

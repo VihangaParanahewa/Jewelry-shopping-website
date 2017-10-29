@@ -1,4 +1,4 @@
-<?php include 'template/header.php' ?>
+<?php $page='registration'; include 'template/header.php' ?>
 
 
         <div class="container">

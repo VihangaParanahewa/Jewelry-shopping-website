@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php $page='message'; include 'header.php'; ?>
 
 
 <h1>Message Box <br></h1>

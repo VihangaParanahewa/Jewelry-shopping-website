@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php $page='about'; include 'header.php'; ?>
 
 <div class="container">
 <h1>About Us</h1>

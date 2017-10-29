@@ -1,4 +1,4 @@
-<?php include 'template/header.php' ?>
+<?php $page='home'; include 'template/header.php' ?>
     <div class="container">
         <h1>NOVEL ONLINE JEWELLERY</h1>
         <hr>

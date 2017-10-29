@@ -1,4 +1,4 @@
-<?php include dirname(__FILE__).'./../Customer/header.php'; ?>
+<?php $page='updateR'; include dirname(__FILE__).'./../Customer/header.php'; ?>
 
 
 <div class="container">
