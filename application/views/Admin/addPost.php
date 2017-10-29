@@ -51,7 +51,7 @@
             </div>
 
             <div class="row">
-                <div class="form-group col-xs-4">
+                <div class="form-group col-xs-3">
                     <label for="price">Price</label>
 
                     <div class="input-group">
@@ -85,7 +85,7 @@
     </div>
 </div>
 
-<?php unset($_SESSION['isDataOnRing'],
+<?php unset(
     $_SESSION['message']
 );?>
 

@@ -27,7 +27,7 @@ if (!($this->session->userdata('logged_in'))){
 
 </head>
 <body background="<?php echo base_url()."image/back1.jpeg";?>" >
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -71,7 +71,7 @@ if (!($this->session->userdata('logged_in'))){
 </ul>
 
 
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-inverse" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">

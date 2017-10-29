@@ -37,7 +37,8 @@
                     <?php if($this->session->userdata('id')==1){?>
                         <td>
                             <a href="<?php echo base_url('index.php/Admin/editRingPost/'.$row['ringId']);?>"  class="btn btn-info">Edit</a>
-                            <a href="<?php echo base_url('index.php/Admin/deleteRing/'.$row['ringId'])?>" class="btn btn-danger">Delete</a>
+                            <a href="<?php echo base_url('index.php/Admin/deleteRing/'.$row['ringId'])?>" onclick="return confirm('Are You Sure ' +
+                         'You Want To Delete Student..!');" class="btn btn-danger">Delete</a>
                         </td>
                     <?php }?>
 
