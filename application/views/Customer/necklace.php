@@ -12,17 +12,17 @@
         <tbody>
 
         <tr><?php foreach ($data as $row){ ?>
-            <td>
-                <img  src="<?php echo base_url()."image/"; ?><?php  echo  $row['image'];?>" alt="necklaceImage" height="200" width="200">
-                <br> Title: <?php echo $row['title'];?> <br>
-                About: <?php echo $row['description'];?> <br>
-                Price: <?php echo $row['price'];?><br>
-                <a href="#" class="btn btn-success">Pay Online</a><br>
-                <?php if($this->session->userdata('id')==1){ ?>
-                <a href="<?php echo base_url('index.php/Admin/editNecklacePost/'.$row['necklaceId'])?>"  class="btn btn-info">Edit</a>
-                <a href="<?php echo base_url('index.php/Admin/deleteNecklace/'.$row['necklaceId'])?>"  onclick="return confirm('Are You Sure ' +
+                <td>
+                    <img  src="<?php echo base_url()."image/"; ?><?php  echo  $row['image'];?>" alt="necklaceImage" height="200" width="200">
+                    <br> Title: <?php echo $row['title'];?> <br>
+                    About: <?php echo $row['description'];?> <br>
+                    Price: <?php echo $row['price'];?><br>
+                    <a href="#" class="btn btn-success">Pay Online</a><br>
+                    <?php if($this->session->userdata('id')==1){ ?>
+                        <a href="<?php echo base_url('index.php/Admin/editNecklacePost/'.$row['necklaceId'])?>"  class="btn btn-info">Edit</a>
+                    <a href="<?php echo base_url('index.php/Admin/deleteNecklace/'.$row['necklaceId'])?>"  onclick="return confirm('Are You Sure ' +
                          'You Want To Delete Student..!');" class="btn btn-danger">Delete</a><?php }?>
-            </td>
+                </td>
             <?php }
             ?>
         </tr>
@@ -45,4 +45,4 @@
 
 
 
-<?php include 'footer.php';?>
+    <?php include 'footer.php';?>
