@@ -27,7 +27,7 @@ if (!($this->session->userdata('logged_in'))){
     </style>
 
 </head>
-<body background="<?php echo base_url()."image/back1.jpeg";?>" >
+<body background="<?php echo base_url()."image/bg2.jpg";?>" >
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
