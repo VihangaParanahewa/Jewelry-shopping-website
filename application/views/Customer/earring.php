@@ -1,5 +1,5 @@
 <?php $page='ring'; include 'header.php'; ?>
-
+<div class="container">
 <h1>Earrings</h1><br>
 
 <?php if ($this->session->flashdata('message')){
@@ -7,24 +7,26 @@
 }
 ?>
 
-<div class=" col-md-9 col-lg-9 ">
+<div class=" col-md-9 col-lg-12 ">
     <table class="table table-user-information" align="center">
         <tbody>
-        <tr><?php foreach ($data as $row){ ?>
-                <td>
-                    <img  src="<?php echo base_url()."image/"; ?><?php  echo  $row['image'];?>" alt="necklaceImage" height="200" width="200">
-                    <br> Title: <?php echo $row['title'];?> <br>
-                    About: <?php echo $row['description'];?> <br>
-                    Price: <?php echo $row['price'];?><br>
-                    <a href="#" class="btn btn-success">Pay Online</a><br>
-                    <?php if($this->session->userdata('id')==1){ ?>
-                        <a href="<?php echo base_url('index.php/Admin/editEarringPost/'.$row['earringId'])?>" class="btn btn-info">Edit</a>
+        <?php $count=0; foreach ($data as $row){
+            if($count==0){?>
+                <tr> <?php }?>
+            <td>
+                <img  src="<?php echo base_url()."image/"; ?><?php  echo  $row['image'];?>" alt="necklaceImage" height="300" width="300">
+                <br>Title: <?php echo $row['title'];?> <br>
+                About: <?php echo $row['description'];?> <br>
+                Price: <?php echo $row['price'];?><br>
+                <a href="#" class="btn btn-success">Pay Online</a><br>
+                <?php if($this->session->userdata('id')==1){ ?>
+                    <a href="<?php echo base_url('index.php/Admin/editEarringPost/'.$row['earringId'])?>" class="btn btn-info">Edit</a>
                     <a href="<?php echo base_url('index.php/Admin/deleteEarring/'.$row['earringId'])?>"  onclick="return confirm('Are You Sure ' +
                          'You Want To Delete Student..!');" class="btn btn-danger">Delete</a><?php }?>
-                </td>
-            <?php }
-            ?>
-        </tr>
+            </td>
+            <?php $count++; if ($count%3==0){?>
+                </tr><?php }}
+        ?>
 
         </tbody>
     </table>
@@ -33,13 +35,6 @@
         $_SESSION['message']
     );?>
 
-
-
-
-
-
-
-
-
+</div>
 
 <?php include 'footer.php';?>

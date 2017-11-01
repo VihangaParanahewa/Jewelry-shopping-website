@@ -1,5 +1,5 @@
 <?php $page='ring'; include 'header.php'; ?>
-
+<div class="container">
 <h1>Necklaces</h1><br>
 
 <?php if ($this->session->flashdata('message')){
@@ -7,13 +7,15 @@
 }
 ?>
 
-<div class=" col-md-9 col-lg-9 ">
+<div class=" col-md-9 col-lg-12 ">
     <table class="table table-user-information" align="center">
         <tbody>
 
-        <tr><?php foreach ($data as $row){ ?>
+        <?php $count=0; foreach ($data as $row){
+            if($count==0){?>
+                <tr> <?php }?>
                 <td>
-                    <img  src="<?php echo base_url()."image/"; ?><?php  echo  $row['image'];?>" alt="necklaceImage" height="200" width="200">
+                    <img  src="<?php echo base_url()."image/"; ?><?php  echo  $row['image'];?>" alt="necklaceImage" height="300" width="300">
                     <br> Title: <?php echo $row['title'];?> <br>
                     About: <?php echo $row['description'];?> <br>
                     Price: <?php echo $row['price'];?><br>
@@ -23,9 +25,9 @@
                     <a href="<?php echo base_url('index.php/Admin/deleteNecklace/'.$row['necklaceId'])?>"  onclick="return confirm('Are You Sure ' +
                          'You Want To Delete Student..!');" class="btn btn-danger">Delete</a><?php }?>
                 </td>
-            <?php }
+            <?php $count++; if ($count%3==0){?>
+                </tr><?php }}
             ?>
-        </tr>
 
         </tbody>
     </table>
@@ -33,16 +35,6 @@
     <?php unset(
         $_SESSION['message']
     );?>
-
-
-
-
-
-
-
-
-
-
-
+</div>
 
     <?php include 'footer.php';?>

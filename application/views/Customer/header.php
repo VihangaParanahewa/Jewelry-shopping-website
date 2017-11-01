@@ -44,9 +44,9 @@ if (!($this->session->userdata('logged_in'))){
             <ul class="nav navbar-nav">
                 <li class="<?php if ($page=='home'){echo 'active';}?>"><a href="<?php echo base_url('index.php/Customer/index')?>">HOME</a></li>
                 <?php if ($this->session->userdata('id')==1){?>
-                    <li class="<?php if ($page=='add'){echo 'active';} ?>"><a href="<?php echo base_url('index.php/Admin/addPost')?>">ADD POST</a></li>
+                    <li class="<?php if ($page=='add'){echo 'active';} ?>"><a href="<?php echo base_url('index.php/Admin/addPost')?>">PUBLISH</a></li>
                 <?php } ?>
-                <li class="<?php if ($page=='ring'){echo 'active';} ?>"><a href="<?php echo base_url('index.php/Customer/viewPost')?>">VIEW POST</a></li>
+                <li class="<?php if ($page=='ring'){echo 'active';} ?>"><a href="<?php echo base_url('index.php/Customer/viewPost')?>">SHOPPING</a></li>
                 <li class="<?php if ($page=='about'){echo 'active';} ?>"><a href="<?php echo base_url('index.php/Customer/about')?>">ABOUT US</a></li>
                 <li class="<?php if ($page=='contact'){echo 'active';} ?>"><a href="<?php echo base_url('index.php/Customer/contact')?>">CONTACT US</a></li>
             </ul>
