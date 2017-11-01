@@ -37,16 +37,9 @@
             </div>
 
             <div class="row">
-                <div class="form-group col-xs-8">
+                <div class="form-group col-xs-4">
                     <label for="description">Description</label>
                     <textarea rows="5" class="form-control" name="description" placeholder="Type Description"></textarea>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="form-group col-xs-3">
-                    <label for="colour">Colour</label>
-                    <input type="color" class="form-control" name="colour">
                 </div>
             </div>
 

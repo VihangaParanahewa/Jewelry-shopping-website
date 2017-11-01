@@ -42,7 +42,6 @@ class UserModel extends CI_Model{
             'title'=> $this->input->post('title',TRUE),
             'category'=> $this->input->post('category',TRUE),
             'description'=> $this->input->post('description',TRUE),
-            'colour'=>$this->input->post('colour',TRUE),
             'price'=>$this->input->post('price',TRUE),
             'image'=>$this->input->post('image',TRUE),
 
@@ -127,10 +126,12 @@ class UserModel extends CI_Model{
             'category'=> $this->input->post('category'),
             'description'=> $this->input->post('description'),
             'price'=>$this->input->post('price'),
-            'colour'=>$this->input->post('colour'),
-            'image'=>$this->input->post('image'),
 
         );
+
+        if($this->input->post('image')!=''){
+            $data['image']=$this->input->post('image');
+            };
 
 
        $this->db->where('ringId',$id);

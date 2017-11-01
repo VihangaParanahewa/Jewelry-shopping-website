@@ -10,14 +10,16 @@
     <style>
         body{
 
-            background-size: 1920px 800px;
+            background-size: 100%;
+
+            color: #8ba8af;
         }
 
     </style>
 
 </head>
 
-<body background="<?php echo base_url()."image/jewelry3.jpg";?>" >
+<body background="<?php echo base_url()."image/jewelry2.jpg";?>" >
 <nav class="navbar navbar-inverse">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->

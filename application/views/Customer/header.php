@@ -20,9 +20,10 @@ if (!($this->session->userdata('logged_in'))){
     <style>
         body{
 
-            background-size: 1920px 800px;
-            color: #999999;
+            background-size: 100%;
+            color: ThreeDLightShadow;
         }
+
     </style>
 
 </head>

@@ -10,7 +10,7 @@
         </div>
     Organization/Institute:
         <div class="container">
-            Jewellerias are obtained from individual <br>manufacturers and sell via website.<br><br>
+            Jewellerias are obtained from <br>individual manufacturers and <br> sell via website.<br><br>
         </div>
     Address: <div class="container">
             42/2, Court road,Homagama.<br><br>

@@ -37,13 +37,6 @@
             </div>
 
             <div class="row">
-                <div class="form-group col-xs-3">
-                <label for="colour">Colour</label>
-                <input type="color" class="form-control" name="colour" value="<?php echo $row['colour']?>">
-            </div>
-            </div>
-
-            <div class="row">
                 <div class="form-group col-xs-4">
                 <label for="price">Price</label>
 
@@ -56,9 +49,9 @@
 
                 <div class="row">
                     <div class="form-group col-xs-4">
-                        <label for="image">Type Image Name</label>
-                        <input type="text" name="image" value="<?php echo $row['image']?>" placeholder="xxx.jpg"/>
-                        (Eg:xxx.jpg)
+                        <label for="image">Image</label>
+                        <input type="file" name="image" value="<?php echo $row['image']?>"/>
+                        (select image if you want to change otherwise don't want to select)
                     </div>
                 </div>
 

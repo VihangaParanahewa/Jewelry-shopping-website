@@ -35,7 +35,6 @@ class Admin extends CI_Controller{
             }
             $this->form_validation->set_rules('category', 'Category', 'required');
             $this->form_validation->set_rules('description', 'Description', 'required');
-            $this->form_validation->set_rules('colour', 'Colour', 'required');
             $this->form_validation->set_rules('price', 'Price', 'required');
             $this->form_validation->set_rules('image', 'Image', 'required');
 
