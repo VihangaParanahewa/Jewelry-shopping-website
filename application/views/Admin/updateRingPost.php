@@ -21,7 +21,7 @@
             </div>
 
             <div class="row">
-                <div class="form-group col-xs-4">
+                <div class="form-group col-xs-2">
                     <label for="category">Category</label>
                     <select name="category" class="form-control">
                         <option value="Ring">Ring</option>
@@ -30,14 +30,14 @@
             </div>
 
             <div class="row">
-                <div class="form-group col-xs-8">
+                <div class="form-group col-xs-4">
                 <label for="description">Description</label>
                 <textarea rows="5" class="form-control" name="description"><?php echo $row['description']?></textarea>
             </div>
             </div>
 
             <div class="row">
-                <div class="form-group col-xs-4">
+                <div class="form-group col-xs-3">
                 <label for="price">Price</label>
 
                 <div class="input-group">

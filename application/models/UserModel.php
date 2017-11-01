@@ -171,10 +171,11 @@ class UserModel extends CI_Model{
             'category'=> $this->input->post('category'),
             'description'=> $this->input->post('description'),
             'price'=>$this->input->post('price'),
-            'colour'=>$this->input->post('colour'),
-            'image'=>$this->input->post('image'),
-
         );
+
+        if($this->input->post('image')!=''){
+            $data['image']=$this->input->post('image');
+        };
 
 
         $this->db->where('necklaceId',$id);
@@ -213,10 +214,12 @@ class UserModel extends CI_Model{
             'category'=> $this->input->post('category'),
             'description'=> $this->input->post('description'),
             'price'=>$this->input->post('price'),
-            'colour'=>$this->input->post('colour'),
-            'image'=>$this->input->post('image'),
 
         );
+
+        if($this->input->post('image')!=''){
+            $data['image']=$this->input->post('image');
+        };
 
 
         $this->db->where('earringId',$id);

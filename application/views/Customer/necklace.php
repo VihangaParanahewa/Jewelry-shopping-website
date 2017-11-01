@@ -15,9 +15,8 @@
             <td>Title</td>
             <td>Category</td>
             <td>Description</td>
-            <td>Colour</td>
-            <td>Image</td>
             <td>Price</td>
+            <td>Image</td>
             <?php if($this->session->userdata('id')==1){ ?>
                 <td>Action</td>
             <?php }?>
@@ -28,9 +27,9 @@
                     <td><?php echo $row['title'];?></td>
                     <td><?php echo $row['category'];?></td>
                     <td><?php echo $row['description'];?></td>
-                    <td bgcolor="<?php echo $row['colour'];?>"></td>
-                    <td><img  src="<?php echo base_url()."image/"; ?><?php  echo  $row['image'];?>" alt="ringImage" height="75" width="100"></td>
                     <td><?php echo $row['price'];?></td>
+                    <td><img  src="<?php echo base_url()."image/"; ?><?php  echo  $row['image'];?>" alt="ringImage" height="150" width="175"></td>
+
 
                     <?php if($this->session->userdata('id')==1){ ?>
                         <td>
