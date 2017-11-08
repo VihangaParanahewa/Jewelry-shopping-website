@@ -1,5 +1,5 @@
 <?php $page='profile'; include dirname(__FILE__).'./../Customer/header.php'; ?>
-
+    <div class="container">
     <h1>My Profile</h1>
     <div class=" col-md-9 col-lg-9 ">
         <table class="table table-user-information" align="center">
@@ -19,5 +19,5 @@
 
             </tbody>
         </table>
-
+    </div>
 <?php include dirname(__FILE__).'./../Customer/footer.php'; ?>

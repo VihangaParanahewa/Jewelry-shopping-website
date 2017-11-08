@@ -51,7 +51,6 @@
                     <div class="form-group col-xs-4">
                         <label for="image">Image</label>
                         <input type="file" name="image" value="<?php echo $row['image']?>"/>
-                        (select image if you want to change otherwise don't want to select)
                     </div>
                 </div>
 
