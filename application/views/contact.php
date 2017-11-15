@@ -1,25 +1,19 @@
 <?php $page='contact'; include 'template/header.php' ?>
-    <div class="container">
-        <h1>Contact Us</h1>
-        <hr>
-
-    <p1 style="font-size: 25px">
-        Name:
-        <div class="container">
-            Gayan Deshapriya Kodagoda <br><br>
-        </div>
-    Organization/Institute:
-        <div class="container">
-            Jewellerias are obtained from <br>individual manufacturers and <br> sell via website.<br><br>
-        </div>
-    Address: <div class="container">
-            42/2, Court road,Homagama.<br><br>
-        </div>
-    Contact Number:
-        <div class="container">
-            077-5742760
-        </div>
-    </p1>
-
+    <div class="col-sm-4">
+        <h2 class="mt-4">Contact Us</h2>
+        <address>
+            <strong>Gayan Deshapriya Kodagoda</strong>
+            <br>No:42/2
+            <br>Court road,Homagama
+            <br>
+        </address>
+        <address>
+            <abbr title="Phone">Mobile:</abbr>
+            (077) 574-2760
+            <br>
+            <abbr title="Email">Email:</abbr>
+            <a href="mailto:#">gayan@gmail.com</a>
+        </address>
+    </div>
     </div>
 <?php include 'template/footer.php'?>

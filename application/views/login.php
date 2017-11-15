@@ -1,4 +1,4 @@
-<?php $page='login'; include 'template/header.php' ?>
+<?php $page='login'; include 'template/logHeader.php' ?>
 
 
 

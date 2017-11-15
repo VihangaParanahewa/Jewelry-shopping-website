@@ -1,14 +1,14 @@
 <?php $page='about'; include 'template/header.php' ?>
 <div class="container">
-    <h1>About Us</h1>
-    <hr>
 
-
-<p1 style="font-size: 25px">Novel Online Jewellery Stores  <br>is a newly operated web based <br>jewellery business
-    to promote online <br> jewellery sales and facilitate the online <br>  shoppers.
-    We are selling three <br>jewellery categories.<br><br>
-Categories: <div class="container">
-        Rings <br> Necklaces <br> Earrings <br> </div></p1>
-</div>
+    <div class="row">
+        <div class="col-sm-8">
+            <h2 class="mt-4">About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt neque tempore recusandae animi soluta quasi? Asperiores rem dolore eaque vel, porro, soluta unde debitis aliquam laboriosam. Repellat explicabo, maiores!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis optio neque consectetur consequatur magni in nisi, natus beatae quidem quam odit commodi ducimus totam eum, alias, adipisci nesciunt voluptate. Voluptatum.</p>
+            <p>
+                <a class="btn btn-primary btn-lg" href="<?php echo base_url('index.php/Home/login')?>">SHOP NOW &raquo;</a>
+            </p>
+        </div>
 
 <?php include 'template/footer.php'?>

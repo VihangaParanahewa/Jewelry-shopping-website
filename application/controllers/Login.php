@@ -49,7 +49,7 @@ public function logoutUser(){
     $logoutDetails = array('id', 'firstName','lastName','email','logged_in');
 
     $this->session->unset_userdata($logoutDetails);
-    redirect('Home/login');
+    redirect('Home');
 }
 
 public function viewProfile(){
