@@ -10,19 +10,41 @@
     <link rel="stylesheet" href="<?php echo base_url('css/style.css');?>">
 
     <style>
-        header{
+        <?php switch($page){
+            case 'home': ?>
+                header{
             background-image: url("<?php echo base_url()."image/slide123.jpg";?>");
             width: 100%;
             height: 500px;
             background-position: 100%;
         }
-        
+
         h1{
             font-size: 500%;
             font-style: italic;
             color: #999988;
             text-align: center;
         }
+        <?php
+        break;
+        case 'about': ?>
+        header{
+            background-image: url("<?php echo base_url()."image/slide11.jpg";?>");
+            width: 100%;
+            height: 500px;
+            background-position: 100%;
+        }
+        <?php
+        break;
+        case 'contact':?>
+        header{
+            background-image: url("<?php echo base_url()."image/slide12.jpg";?>");
+            width: 100%;
+            height: 500px;
+            background-position: 100%;
+        }
+       <?php break; }?>
+
 
         h2{
             color: #1f1d1d;
@@ -30,6 +52,9 @@
 
         body{
             color: #4F5155;
+        }
+        footer{
+            color: #aaaaaa;
         }
 
 
@@ -54,6 +79,7 @@
         </div>
 
     </nav>
+    <?php if ($page=='home'){?>
 
         <h1>NOVEL <br>
             <div class="container">
@@ -65,6 +91,7 @@
             <br>
 
         </h1>
+    <?php }?>
 
 </header>
 
