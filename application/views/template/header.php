@@ -81,10 +81,11 @@
     </nav>
     <?php if ($page=='home'){?>
 
-        <h1>NOVEL <br>
+        <br><h1>NOVEL <br>
             <div class="container">
                 JEWELLERS
             </div>
+
             <div class="container">
                 <a href="<?php echo base_url('index.php/Home/login')?>" class="btn btn-warning btn-lg active ">GET STARTED</a>
             </div>

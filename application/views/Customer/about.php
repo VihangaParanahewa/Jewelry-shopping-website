@@ -1,15 +1,46 @@
-<?php $page='about'; include 'header.php'; ?>
+<?php $page='about'; include 'header2.php'; ?>
 
 <div class="container">
-<h1>About Us</h1>
-<hr>
+
+    <div class="row">
+        <div class="col-sm-8">
+            <h2 class="mt-4">About Us</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt neque tempore recusandae animi soluta quasi? Asperiores rem dolore eaque vel, porro, soluta unde debitis aliquam laboriosam. Repellat explicabo, maiores!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis optio neque consectetur consequatur magni in nisi, natus beatae quidem quam odit commodi ducimus totam eum, alias, adipisci nesciunt voluptate. Voluptatum.</p>
+            <p>
+                <a class="btn btn-warning btn-lg active" href="<?php echo base_url('index.php/Customer/postEarring')?>">SHOP NOW &raquo;</a>
+            </p>
+        </div>
+    </div>
+
+    <div class=" col-md-9 col-lg-12 ">
+        <table class="table table-user-information" align="center">
+            <tbody>
 
 
-    <p1 style="font-size: 25px">Novel Online Jewellery Stores is a newly operated web based jewellery business
-        to promote online <br> jewellery sales and facilitate the online shoppers.
-        We are selling three jewellery categories.<br><br>
-        Categories: <div class="container">
-            Rings <br> Necklaces <br> Earrings <br> </div></p1>
+            <tr>
+                <td>
+                    <img  src="<?php echo base_url()."image/earring112.jpg";?>" alt="earringImage" height="250" width="300">
+                    <br> <h2>Earring </h2><br>
+                    <a href="<?php echo base_url('index.php/Customer/postEarring')?>" class="btn btn-warning active">Pay Online</a><br>
+                </td>
+                <td>
+                    <img  src="<?php echo base_url()."image/necklace111.jpg";?>" alt="necklaceImage" height="300" width="300">
+                    <br> <h2>Necklace </h2><br>
+                    <a href="<?php echo base_url('index.php/Customer/postNecklace')?>" class="btn btn-warning active">Pay Online</a><br>
+                </td>
+
+                <td>
+                    <img  src="<?php echo base_url()."image/ring111.png";?>" alt="ringImage" height="300" width="400">
+                    <br> <h2>Ring </h2><br>
+                    <a href="<?php echo base_url('index.php/Customer/postEarring')?>" class="btn btn-warning active">Pay Online</a><br>
+                </td>
+            </tr>
+
+
+            </tbody>
+        </table>
+    </div>
 </div>
 
 
