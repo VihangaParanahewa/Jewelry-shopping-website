@@ -8,7 +8,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt neque tempore recusandae animi soluta quasi? Asperiores rem dolore eaque vel, porro, soluta unde debitis aliquam laboriosam. Repellat explicabo, maiores!</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis optio neque consectetur consequatur magni in nisi, natus beatae quidem quam odit commodi ducimus totam eum, alias, adipisci nesciunt voluptate. Voluptatum.</p>
             <p>
-                <a class="btn btn-warning btn-lg active" href="<?php echo base_url('index.php/Customer/postEarring')?>">SHOP NOW &raquo;</a>
+                <a class="btn btn-warning btn-lg active" href="<?php echo base_url('index.php/Customer/postRing')?>">BUY NOW &raquo;</a>
             </p>
         </div>
     </div>
@@ -33,7 +33,7 @@
                 <td>
                     <img  src="<?php echo base_url()."image/ring111.png";?>" alt="ringImage" height="300" width="400">
                     <br> <h2>Ring </h2><br>
-                    <a href="<?php echo base_url('index.php/Customer/postEarring')?>" class="btn btn-warning active">Pay Online</a><br>
+                    <a href="<?php echo base_url('index.php/Customer/postRing')?>" class="btn btn-warning active">Pay Online</a><br>
                 </td>
             </tr>
 
