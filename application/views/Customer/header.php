@@ -19,7 +19,7 @@ if (!($this->session->userdata('logged_in'))){
 
 </head>
 <body background="<?php echo base_url()."image/bg2.jpg";?>" >
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="<?php if ($page=='ring'){echo 'active';} ?>"><a href="<?php echo base_url('index.php/Customer/viewPost')?>">SHOPPING</a>

@@ -15,7 +15,7 @@
                 header{
             background-image: url("<?php echo base_url()."image/slide123.jpg";?>");
             width: 100%;
-            height: 500px;
+            height: 529px;
             background-position: 100%;
         }
 
@@ -31,7 +31,7 @@
         header{
             background-image: url("<?php echo base_url()."image/slide11.jpg";?>");
             width: 100%;
-            height: 500px;
+            height: 529px;
             background-position: 100%;
         }
         <?php
@@ -40,7 +40,7 @@
         header{
             background-image: url("<?php echo base_url()."image/slide12.jpg";?>");
             width: 100%;
-            height: 500px;
+            height: 550px;
             background-position: 100%;
         }
        <?php break; }?>
@@ -65,8 +65,13 @@
 
 <body>
 <header>
-    <nav class="navbar navbar-inverse">
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
             <ul class="nav navbar-nav">
                 <li class="<?php if ($page=='home'){echo 'active';} ?>"><a href="<?php echo base_url('index.php/Home/index')?>">HOME</a></li>
                 <li class="<?php if ($page=='about'){echo 'active';} ?>"><a href="<?php echo base_url('index.php/Home/about')?>">ABOUT US</a></li>
@@ -76,12 +81,12 @@
                 <li class="<?php if ($page=='login'){echo 'active';} ?>"><a href="<?php echo base_url('index.php/Home/login')?>">LOG IN</a></li>
                 <li class="<?php if ($page=='registration'){echo 'active';} ?>"><a href="<?php echo base_url('index.php/Home/register')?>">REGISTER</a></li>
             </ul>
-        </div>
+
 
     </nav>
     <?php if ($page=='home'){?>
 
-        <br><h1>NOVEL <br>
+        <br><br><br><br><br><br><h1>NOVEL <br>
             <div class="container">
                 JEWELLERS
             </div>

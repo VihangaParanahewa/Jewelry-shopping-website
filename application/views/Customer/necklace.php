@@ -1,4 +1,5 @@
 <?php $page='ring'; include 'header.php'; ?>
+<br><br>
 <div class="container">
 <h1>Necklaces</h1><br>
 

@@ -1,5 +1,5 @@
 <?php $page='ring'; include 'header.php'; ?>
-
+<br><br>
 <div class="container">
 <h1>Rings</h1>
     <br>

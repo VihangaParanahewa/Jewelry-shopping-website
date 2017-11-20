@@ -22,7 +22,7 @@ if (!($this->session->userdata('logged_in'))){
         header{
             background-image: url("<?php echo base_url()."image/slide123.jpg";?>");
             width: 100%;
-            height: 500px;
+            height: 529px;
             background-position: 100%;
         }
 
@@ -39,7 +39,7 @@ if (!($this->session->userdata('logged_in'))){
         header{
             background-image: url("<?php echo base_url()."image/slide11.jpg";?>");
             width: 100%;
-            height: 500px;
+            height: 529px;
             background-position: 100%;
         }
         <?php
@@ -48,7 +48,7 @@ if (!($this->session->userdata('logged_in'))){
         header{
             background-image: url("<?php echo base_url()."image/slide12.jpg";?>");
             width: 100%;
-            height: 500px;
+            height: 550px;
             background-position: 100%;
         }
         <?php break; }?>
@@ -78,7 +78,7 @@ if (!($this->session->userdata('logged_in'))){
 </head>
 <body>
 <header>
-<nav class="navbar navbar-inverse">
+<nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
             <li class="<?php if ($page=='ring'){echo 'active';} ?>"><a href="<?php echo base_url('index.php/Customer/viewPost')?>">SHOPPING</a>
@@ -107,7 +107,7 @@ if (!($this->session->userdata('logged_in'))){
 
     <?php if ($page=='home'){?>
 
-        <br><h1>NOVEL <br>
+        <br><br><br><br><br><br><h1>NOVEL <br>
             <div class="container">
                 JEWELLERS
             </div>
