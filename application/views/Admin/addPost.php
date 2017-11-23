@@ -1,5 +1,5 @@
 <?php $page='add'; include dirname(__FILE__).'./../Customer/header.php'; ?>
-
+<br><br>
 <div class="container">
     <div class="row">
 

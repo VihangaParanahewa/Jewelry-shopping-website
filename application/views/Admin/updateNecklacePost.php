@@ -1,6 +1,6 @@
 <?php $page='updateN'; include dirname(__FILE__).'./../Customer/header.php'; ?>
 
-
+<br><br>
 <div class="container">
     <div class="row">
 
