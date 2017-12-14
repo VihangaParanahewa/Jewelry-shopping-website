@@ -22,7 +22,7 @@
                 About: <?php echo $row['description'];?> <br>
                 Price: <?php echo $row['price'];?><br>
                 <a href="#" class="btn btn-success">Pay Online</a><br>
-                <?php if($this->session->userdata('id')==1){ ?>
+                <?php if($this->session->userdata('type')=='Admin'){ ?>
                     <a href="<?php echo base_url('index.php/Admin/editRingPost/'.$row['ringId']);?>"  class="btn btn-info">Edit</a>
                     <a href="<?php echo base_url('index.php/Admin/deleteRing/'.$row['ringId'])?>" onclick="return confirm('Are You Sure ' +
                          'You Want To Delete Student..!');" class="btn btn-danger">Delete</a><?php }?>
@@ -38,6 +38,7 @@
         $_SESSION['message']
     );?>
 
+</div>
 </div>
 
 <?php include 'footer.php';?>

@@ -12,6 +12,10 @@ class Admin extends CI_Controller{
         $this->load->view('Admin/addPost');
     }
 
+    public function operations(){
+        $this->load->view('Admin/operations');
+    }
+
     public function add()
     {
 

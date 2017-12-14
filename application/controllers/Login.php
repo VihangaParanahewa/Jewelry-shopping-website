@@ -16,12 +16,16 @@ class Login extends CI_Controller{
             $result=$this->UserModel->userLogin();
 
             if($result!=false){
+                $this->load->model('UserModel');
+                $this->UserModel->userActive($result->id);
 
                 $userData=array(
                     'id'=>$result->id,
                     'firstName'=>$result->firstName,
                     'lastName'=>$result->lastName,
                     'email'=>$result->email,
+                    'telNo'=>$result->telNo,
+                    'type'=>$result->type,
                     'logged_in'=>TRUE,
 
                 );
@@ -47,6 +51,8 @@ class Login extends CI_Controller{
 public function logoutUser(){
 
     $logoutDetails = array('id', 'firstName','lastName','email','logged_in');
+    $this->load->model('UserModel');
+    $this->UserModel->userInActive($this->session->userdata('id'));
 
     $this->session->unset_userdata($logoutDetails);
     redirect('Home');

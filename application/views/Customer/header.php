@@ -15,6 +15,24 @@ if (!($this->session->userdata('logged_in'))){
     <title><?php echo $this->session->userdata('firstName')." ".$this->session->userdata('lastName') ?></title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="<?php echo base_url('css/style.css');?>">
+    <style>
+        table{
+            color: ThreeDHighlight;
+        }
+        h3{
+            color: ThreeDLightShadow;
+        }
+
+        .btn-circle {
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            padding: 6px 0;
+            font-size: 12px;
+            line-height: 1.428571429;
+            border-radius: 15px;
+        }
+    </style>
 
 
 </head>
@@ -29,13 +47,14 @@ if (!($this->session->userdata('logged_in'))){
                         <li><a class="navbar-brand" href="<?php echo base_url('index.php/Customer/postEarring')?>">Earrings</a></li>
                     </ul>
                 </li>
-                <?php if ($this->session->userdata('id')==1){?>
+                <?php if ($this->session->userdata('type')=='Admin'){?>
                     <li class="<?php if ($page=='add'){echo 'active';} ?>"><a href="<?php echo base_url('index.php/Admin/addPost')?>">PUBLISH</a></li>
+                    <li class="<?php if ($page=='operations'){echo 'active';} ?>"><a href="<?php echo base_url('index.php/Admin/operations')?>">OPERATIONS</a></li>
                 <?php } ?>
                 <li class="<?php if ($page=='home'){echo 'active';}?>"><a href="<?php echo base_url('index.php/Customer/index')?>">HOME</a></li>
                 <li class="<?php if ($page=='about'){echo 'active';} ?>"><a href="<?php echo base_url('index.php/Customer/about')?>">ABOUT US</a></li>
                 <li class="<?php if ($page=='contact'){echo 'active';} ?>"><a href="<?php echo base_url('index.php/Customer/contact')?>">CONTACT US</a></li>
-                <li class="<?php if ($page=='profile'){echo 'active';} ?>"><a href="<?php echo base_url('index.php/Login/viewProfile');?>"><?php echo $this->session->userdata('firstName')." "?>(Logging)</a>
+                <li class="<?php if ($page=='profile'){echo 'active';} ?>"><a href="#"><?php echo $this->session->userdata('firstName')." (".$this->session->userdata('type').")";?></a>
                     <ul>
                         <li><a class="navbar-brand" href="<?php echo base_url('index.php/Login/viewProfile');?>">View Profile</a></li>
                         <li><a class="navbar-brand" href="<?php echo base_url('index.php/Login/logoutUser');?>">Log Out</a></li>

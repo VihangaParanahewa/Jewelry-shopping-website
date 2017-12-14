@@ -20,7 +20,7 @@
                 About: <?php echo $row['description'];?> <br>
                 Price: <?php echo $row['price'];?><br>
                 <a href="#" class="btn btn-success">Pay Online</a><br>
-                <?php if($this->session->userdata('id')==1){ ?>
+                <?php if($this->session->userdata('type')=='Admin'){ ?>
                     <a href="<?php echo base_url('index.php/Admin/editEarringPost/'.$row['earringId'])?>" class="btn btn-info">Edit</a>
                     <a href="<?php echo base_url('index.php/Admin/deleteEarring/'.$row['earringId'])?>"  onclick="return confirm('Are You Sure ' +
                          'You Want To Delete Student..!');" class="btn btn-danger">Delete</a><?php }?>

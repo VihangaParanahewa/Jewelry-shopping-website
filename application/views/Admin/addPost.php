@@ -5,7 +5,7 @@
 
         <div class="col-md-8 col-md-offset-2">
 
-            <h1>Create Post</h1>
+            <h1>CREATE POST</h1>
             <hr>
 
             <?php
@@ -63,12 +63,8 @@
 
             <div class="row">
                 <div class="form-group col-xs-4">
-                    <button type="submit" class="btn btn-primary" name="submit" value="create">
-                        Create
-                    </button>
-                    <button class="btn btn-danger" name="submit" value="cancel">
-                        Cancel
-                    </button>
+                    <button type="submit" class="btn btn-primary" name="submit" value="create">Create</button>
+                    <button class="btn btn-danger" name="submit" value="cancel">Cancel</button>
                 </div>
             </div>
 

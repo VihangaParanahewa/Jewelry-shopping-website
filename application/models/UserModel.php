@@ -11,6 +11,8 @@ class UserModel extends CI_Model{
             'lastName'=> $this->input->post('lastName',TRUE),
             'email'=> $this->input->post('email',TRUE),
             'password'=> sha1($this->input->post('password',TRUE)),
+            'telNo'=>$this->input->post('telNo',TRUE),
+            'type'=>$this->input->post('type')
 
         );
 
@@ -34,6 +36,19 @@ class UserModel extends CI_Model{
 
 
     }
+
+    public function userActive($id){
+        $data = array('logged_in'=>TRUE);
+        $this->db->where('id',$id);
+        $this->db->update('user',$data);
+    }
+
+    public function userInActive($id){
+        $data = array('logged_in'=>FALSE);
+        $this->db->where('id',$id);
+        $this->db->update('user',$data);
+    }
+
 
     public function insertPostData(){
 
@@ -230,6 +245,39 @@ class UserModel extends CI_Model{
     public function deleteEarringPostData($id){
         $this->db->where('earringId',$id);
         return $this->db->delete('earring');
+    }
+
+    public function viewSystemUsers(){
+        $respond=$this->db->get('user');
+        if ($respond->num_rows()>0) {
+            return $respond->result_array();
+        }else{
+            return false;
+        }
+    }
+
+
+    public function blockUser($id){
+        $this->db->where('id',$id);
+        return $this->db->delete('user');
+    }
+
+
+    public function UsersDetail($id){
+        $this->db->where('id',$id);
+        $respond=$this->db->get('user');
+        return $respond->result_array();
+    }
+
+
+    public function viewOnlineUsers(){
+        $this->db->where('logged_in',1);
+        $respond=$this->db->get('user');
+        if ($respond->num_rows()>0) {
+            return $respond->result_array();
+        }else{
+            return false;
+        }
     }
 
 }
