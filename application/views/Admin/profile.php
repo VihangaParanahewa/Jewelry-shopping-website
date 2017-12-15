@@ -1,7 +1,11 @@
 <?php $page='profile'; include dirname(__FILE__).'./../Customer/header.php'; ?>
     <div class="container">
     <br><br>
-    <h1>My Profile</h1>
+    <h1>My Profile
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="<?php echo base_url('index.php/EditProfile')?>" class="btn btn-info active">Edit Profile</a>
+        &nbsp&nbsp<a href="<?php echo base_url('index.php/EditProfile/passwordOperation')?>" class="btn btn-danger active">Change The Password</a>
+    </h1>
+
     <div class=" col-md-9 col-lg-9 ">
         <h3>
         <table class="table table-user-information" align="center">
@@ -31,5 +35,7 @@
         </table>
     </h3>
     </div>
+
+
 
 <?php include dirname(__FILE__).'./../Customer/footer.php'; ?>
