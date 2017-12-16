@@ -68,5 +68,8 @@
     </div>
 
 
+<?php unset(
+    $_SESSION['message']
+);?>
 
 <?php include 'template/footer.php'?>

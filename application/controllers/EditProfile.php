@@ -22,22 +22,36 @@ class EditProfile extends CI_Controller{
 
             redirect('EditProfile');
 
+
         }else{
             $updateProfileDetails = array('firstName', 'lastName', 'email', 'telNo');
-            $this->session->unset_userdata($updateProfileDetails);
             $this->load->model('UserEditModel');
-            $result=$this->UserEditModel->insertUserEditData();
+            $respond=$this->UserEditModel->checkEmail();
 
-            $userUpdateData = array(
-                'firstName' => $result->firstName,
-                'lastName' => $result->lastName,
-                'email' => $result->email,
-                'telNo' => $result->telNo,
+            if ($respond){
 
-            );
+                $this->session->unset_userdata($updateProfileDetails);
+                $this->load->model('UserEditModel');
+                $result=$this->UserEditModel->insertUserEditData();
 
-            $this->session->set_userdata($userUpdateData);
-            $this->load->view('Admin/profile');
+
+                $userUpdateData = array(
+                    'firstName' => $result->firstName,
+                    'lastName' => $result->lastName,
+                    'email' => $result->email,
+                    'telNo' => $result->telNo,
+
+                );
+
+                $this->session->set_userdata($userUpdateData);
+                $this->load->view('Admin/profile');
+
+            }else{
+                $this->session->set_flashdata('message','Email You Newly Entered,Already Exist..Try Again!');
+                redirect('Admin/editProfile');
+            }
+
+
 
         }
 

@@ -16,6 +16,10 @@ class Admin extends CI_Controller{
         $this->load->view('Admin/operations');
     }
 
+    public function editProfile(){
+        $this->load->view('Admin/editProfile');
+    }
+
     public function add()
     {
 

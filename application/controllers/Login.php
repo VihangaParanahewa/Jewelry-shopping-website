@@ -62,4 +62,73 @@ class Login extends CI_Controller
         $this->load->view('Admin/profile');
     }
 
+
+    public function requireEmail(){
+        $this->form_validation->set_rules('email', 'Email Address', 'required|valid_email');
+
+
+        if ($this->form_validation->run() == FALSE)
+        {
+            $this->session->set_flashdata('message','Email Field Required & Enter Your Logging valid Email..!');
+            redirect('Home/login');
+
+        }else{
+
+            $this->load->model('UserEditModel');
+            $data=$this->UserEditModel->findRelevantUser();
+
+            if($data!=false){
+                $this->load->view('codeValidation',array('data' => $data));
+            }else{
+                $this->session->set_flashdata('message','Error Occurred...enter the correct logging Email..!');
+                redirect('Home/login');
+            }
+
+        }
+    }
+
+
+    public function matchCode(){
+        $this->form_validation->set_rules('generatedCode', 'SMS CODE', 'required');
+        $this->form_validation->set_rules('textCode', 'Entered Code', 'required|matches[generatedCode]');
+
+
+        if ($this->form_validation->run() == FALSE)
+        {
+            $this->session->set_flashdata('message','You Entered Code NOT Match..!');
+            redirect('Home/login');
+
+        }else{
+            $data=array('email'=>$this->input->post('email'));
+
+            $this->load->view('newPassword',array('data' => $data));
+        }
+    }
+
+
+    public function updatePassword(){
+        $this->form_validation->set_rules('password', 'Password', 'required');
+        $this->form_validation->set_rules('confirmPassword', 'Confirm Password', 'required|matches[password]');
+        if ($this->form_validation->run() == FALSE)
+        {
+            $this->session->set_flashdata('message','You are Violated the Conditions..!');
+            redirect('Home/login');
+
+        }else{
+            $this->load->model('UserEditModel');
+            $data=$this->UserEditModel->updateNewPassword();
+
+            if($data){
+                $this->session->set_flashdata('message','Update The Password, Now You can Log With New Password..!');
+                redirect('Home/login');;
+            }else{
+                $this->session->set_flashdata('message','Opzz..Error Occurred, Try Again..!');
+                redirect('Home/login');
+            }
+        }
+
+
+    }
+
+
 }

@@ -5,6 +5,13 @@
     <h1>Edit Profile
         &nbsp&nbsp<a href="<?php echo base_url('index.php/Login/viewProfile')?>" class="btn btn-warning active">BACK</a>
     </h1>
+
+    <?php
+    if ($this->session->flashdata('message')){
+        echo "<h3>".$this->session->flashdata('message')."</h3>";
+    }
+    ?>
+
     <hr>
     <?php echo validation_errors(); ?>
     <?php echo form_open('EditProfile/ValidateEdit');?>
@@ -45,5 +52,8 @@
     <?php echo form_close(); ?>
 </div>
 
+<?php unset(
+    $_SESSION['message']
+);?>
 
 <?php include dirname(__FILE__).'./../Customer/footer.php';?>
