@@ -30,7 +30,7 @@ class Customer extends CI_Controller{
         }else{
 
             $this->session->set_flashdata('message','OPzz...Nothing To Publish');
-            $this->load->view('Customer/ring');
+            $this->load->view('Customer/ring',array('data' => $data));
         }
 
     }

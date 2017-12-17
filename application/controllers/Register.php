@@ -1,8 +1,11 @@
 <?php
 
 
-class Register extends CI_Controller
-{
+class Register extends CI_Controller{
+
+    public function operation(){
+        $this->load->view('Admin/operations');
+    }
 
     public function registerUser(){
         $this->form_validation->set_rules('firstName', 'First Name', 'required');
@@ -13,10 +16,10 @@ class Register extends CI_Controller
         $this->form_validation->set_rules('telNo', 'Contact Number', 'trim|required|min_length[10]|max_length[15]|is_unique[user.telNo]');
 
 
-        if ($this->form_validation->run() == FALSE)
-        {
+        if ($this->form_validation->run() == FALSE || $this->input->post('type')=="None") {
             if ($this->input->post('submit',TRUE)=='Confirm'){
-                $this->load->view('Admin/operations');
+                $this->session->set_flashdata('message','Please Select The Type Field..!');
+                redirect('Register/operation');
             }else{
                 $this->load->view('registration');
             }
