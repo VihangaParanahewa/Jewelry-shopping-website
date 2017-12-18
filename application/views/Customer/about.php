@@ -5,8 +5,8 @@
     <div class="row">
         <div class="col-sm-8">
             <h2 class="mt-4">About Us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A deserunt neque tempore recusandae animi soluta quasi? Asperiores rem dolore eaque vel, porro, soluta unde debitis aliquam laboriosam. Repellat explicabo, maiores!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis optio neque consectetur consequatur magni in nisi, natus beatae quidem quam odit commodi ducimus totam eum, alias, adipisci nesciunt voluptate. Voluptatum.</p>
+            <p>Novel Online Jewellery Stores  is a newly operated web based jewellery business to promote online jewellery sales and facilitate the online shoppers.</p>
+            <p>The purpose of this website is to supply an efficient service for customers on online shopping.We are selling three categories Ring,Necklace,Earring.</p>
             <p>
                 <a class="btn btn-warning btn-lg active" href="<?php echo base_url('index.php/Customer/postRing')?>">BUY NOW &raquo;</a>
             </p>
