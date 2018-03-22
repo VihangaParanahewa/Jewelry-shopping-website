@@ -1,2 +1,2 @@
-# login.....(Jewellery Online Shooping Website)
+# login(Jewellery Online Shooping Website)
 CodeIgniter
