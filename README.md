@@ -1,2 +1,2 @@
-# login(Jewellery Online Shooping Website)
-CodeIgniter
+# Jewellery Online Shooping Website
+CodeIgniter, Txtlocal message API
