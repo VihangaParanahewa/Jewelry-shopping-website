@@ -11,22 +11,6 @@
                     <a class="btn btn-primary btn-lg active" href="<?php echo base_url('index.php/Home/login')?>">SHOP NOW &raquo;</a>
                 </p>
             </div>
-            <div class="col-sm-4">
-                <h2 class="mt-4">Contact Us</h2>
-                <address>
-                    <strong>Gayan Deshapriya Kodagoda</strong>
-                    <br>No:42/2
-                    <br>Court road,Homagama
-                    <br>
-                </address>
-                <address>
-                    <abbr title="Phone">Mobile:</abbr>
-                    (077) 574-2760
-                    <br>
-                    <abbr title="Email">Email:</abbr>
-                    <a href="mailto:#">gayandeshapriya@gmail.com</a>
-                </address>
-            </div>
         </div>
 
     <div class=" col-md-9 col-lg-12 ">

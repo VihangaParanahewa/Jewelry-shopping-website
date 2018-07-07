@@ -47,7 +47,7 @@
         </div>
     </div>
     <br>
-    <button type="submit" class="btn btn-danger" name="submit" value="Update">Update Profile</button>
+    <button type="submit" class="btn btn-danger" name="submit" value="Update">Upgrade Profile</button>
 
     <?php echo form_close(); ?>
 </div>
